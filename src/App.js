@@ -1,21 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
 import { ThemeProvider } from "styled-components";
-import theme from "./utils/theme";
+import GlobalStyle from "./theme/GlobalStyles";
+import theme from "./theme/theme";
 import {
   H1,
   H2,
   H3,
   Text,
   ButtonText,
-} from "./styled-components/typography.js";
+} from "./theme/typography.js";
 
+import Navbar from './components/Navbar/Navbar'
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle></GlobalStyle>
       <div className="App">
+        <Navbar></Navbar>
         <header className="App-header">
-          <H1 space={props => this.props.spaces.smaller} fontSize={[3, 4, 5, 6]}>
+          <H1 space='smaller' fontSize='display1'>
             Hello
         </H1>
           <H2>heading2</H2>
