@@ -1,7 +1,32 @@
 import { createGlobalStyle } from 'styled-components';
 import fonts from "./fonts";
+import GraphikLightOTF from "../fonts/GraphikLight.otf";
+import GraphikRegularOTF from "../fonts/GraphikRegular.otf";
+import GraphikSemiboldOTF from "../fonts/GraphikSemibold.otf";
+import GraphikBoldOTF from "../fonts/GraphikBold.otf";
 
 const GlobalStyle = createGlobalStyle`
+
+  @font-face {
+    font-family: 'GraphikLight';
+    src: url('${GraphikLightOTF}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikRegular';
+    src: url('${GraphikRegularOTF}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikSemibold';
+    src: url('${GraphikSemiboldOTF}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikBold';
+    src: url('${GraphikBoldOTF}') format('opentype');
+  }
+
   html {
     height: 100%;
     width: 100%;
@@ -11,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: teal;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
+    font-family: 'GraphikRegular';
   }
 
    .App {
@@ -27,7 +52,8 @@ const GlobalStyle = createGlobalStyle`
 
     ul, ol, li {
       list-style: none;
-      margin: unset;
+      margin: 0;
+      padding: 0;
   }
 
   input {

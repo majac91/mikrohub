@@ -20,13 +20,16 @@ breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
 breakpoints.xxl = breakpoints[5];
 
-const spaces = ["4px", "8px", "16px", "32px", "48px", "56px"];
+const spaces = ["4px", "8px", "16px", "18px", "38px", "48px", "56px"];
 
-spaces.sm = spaces[1];
-spaces.xs = spaces[0];
-spaces.md = spaces[2];
-spaces.lg = spaces[3];
-spaces.xl = spaces[4];
+spaces.xxs = spaces[0];
+spaces.xs = spaces[1];
+spaces.s = spaces[2];
+spaces.md = spaces[3];
+spaces.lg = spaces[4];
+spaces.xl = spaces[5];
+spaces.xxl = spaces[6];
+
 
 const colors = {
     text: "#3E3C40",

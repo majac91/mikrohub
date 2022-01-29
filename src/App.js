@@ -1,28 +1,28 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./theme/GlobalStyles";
 import theme from "./theme/theme";
-import {
-  H1,
-  H2,
-  H3,
-  Text,
-  ButtonText,
-} from "./theme/typography.js";
+import { Route, Routes } from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar'
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ProcessPage from './pages/ProcessPage';
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle></GlobalStyle>
-      <div className="App">
-        <Navbar></Navbar>
-        <header className="App-header">
-          <H1 space='smaller' fontSize='display1'>
-            Hello
-        </H1>
-          <H2>heading2</H2>
-        </header>
-      </div>
+      <GlobalStyle />
+      <Navbar />
+
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="process" element={<ProcessPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="about" element={<AboutPage />} />
+      </Routes>
     </ThemeProvider>
 
   );

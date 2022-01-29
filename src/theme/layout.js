@@ -14,3 +14,7 @@ export const Box = styled.div`
             max-width: calc(100vw - 540px);
     `}
 `;
+
+export const Flex = styled.div`
+	display: flex;
+`;

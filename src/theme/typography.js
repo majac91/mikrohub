@@ -4,7 +4,6 @@ import fonts from "./fonts";
 
 export const H1 = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.h1};
-  font-family: ${fonts.regular};
   font-weight: 700;
   letter-spacing: -0.02em;
   ${color};
