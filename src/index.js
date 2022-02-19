@@ -5,6 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 
+import { CSSPlugin } from 'gsap/CSSPlugin'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from 'gsap';
+
+gsap.registerPlugin(CSSPlugin)
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(
+    ScrollTrigger
+  );
+
+  gsap.core.globals("ScrollTrigger", ScrollTrigger);
+  ScrollTrigger.config({ limitCallbacks: true });
+}
+
 
 ReactDOM.render(
   <React.StrictMode>

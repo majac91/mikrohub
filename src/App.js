@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./theme/GlobalStyles";
-import theme from "./theme/theme";
+import theme from "./theme/base/theme";
 import { Route, Routes } from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar'

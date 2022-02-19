@@ -1,12 +1,15 @@
 import React from 'react';
-import { H1, H2 } from '../theme/typography';
+import { H1, H2 } from '../theme/base/typography';
+import HomeCover from '../components/Home/HomeCover/HomeCover';
+import ProjectsSection from '../components/Home/ProjectsSection/ProjectsSection';
+
 const HomePage = () => {
     return (
         <header className="App-header">
-            <H1 space='smaller' fontSize='display1'>
-                Hello
-            </H1>
-            <H2>heading2</H2>
+            <HomeCover />
+            <ProjectsSection />
+            <HomeCover />
+
         </header>
     );
 }

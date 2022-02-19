@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import fonts from "./fonts";
 import GraphikLightOTF from "../fonts/GraphikLight.otf";
 import GraphikRegularOTF from "../fonts/GraphikRegular.otf";
 import GraphikSemiboldOTF from "../fonts/GraphikSemibold.otf";
 import GraphikBoldOTF from "../fonts/GraphikBold.otf";
 
 const GlobalStyle = createGlobalStyle`
-
   @font-face {
     font-family: 'GraphikLight';
     src: url('${GraphikLightOTF}') format('opentype');
@@ -27,27 +25,58 @@ const GlobalStyle = createGlobalStyle`
     src: url('${GraphikBoldOTF}') format('opentype');
   }
 
-  html {
-    height: 100%;
-    width: 100%;
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+
+    &, &:before, &:after {
+        box-sizing: border-box;
+    }
   }
+
 
   body {
     margin: 0;
     padding: 0;
-    background: teal;
     font-family: 'GraphikRegular';
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+      overflow: visible;
+    }
   }
 
+
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: $page-background-color;
+  }
+
+
+// RESPONSIVE
+html {
+  font-size: 5vw;
+
+  @include media-breakpoint-up(xs) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-up(xmd) {
+    font-size: 1.11vw;
+  }
+}
    .App {
       min-width: 100vw;
       min-height: 100vh;
       height: 100%;
       width: 100%;
-
-      @media (max-width: 768px) {
-      overflow: hidden;
-      }
    }
 
     ul, ol, li {
@@ -81,6 +110,16 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 `;
 
