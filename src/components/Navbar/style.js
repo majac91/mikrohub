@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { respondTo } from '../../theme/utils/respondTo';
 import fonts from '../../fonts/fonts';
 import { Link } from 'react-router-dom'
+import { layout } from "styled-system";
 
 export const Nav = styled.nav`
     display: flex;
@@ -47,6 +48,7 @@ export const NavMenu = styled.ul`
         min-height: unset;
         padding: unset;
         transform: unset!important;
+import { layout } from 'styled-system';
 
     `}
 
@@ -102,10 +104,23 @@ export const Burger = styled.button`
     cursor: pointer;
     z-index: 1001;
 
-
     ${respondTo.md`
         display: none;
     `};
+
+    ${(props) => {
+        switch (props.$menu) {
+            case "projects-menu":
+                return css`
+                    ${respondTo.md`
+        display: block;
+    `};
+
+        `;
+        }
+    }}
+
+    ${layout}
 `;
 
 export const Bars = styled.span`
@@ -131,6 +146,7 @@ export const Bars = styled.span`
         switch (props.$mode) {
             case "open":
                 return css`
+                
                 &:before {
                     transform: rotate(45deg);
                 }

@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProcessPage from './pages/ProcessPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="about" element={<AboutPage />} />
       </Routes>
-    </ThemeProvider>
 
+      <Footer />
+    </ThemeProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 import img from "../../../img/homepage/landingpage_skroll_01_01.jpg"
@@ -8,8 +8,8 @@ import { Flex } from '../../../theme/base/layout';
 import { VerticalText, ScrollingLetter, PictureCardWrapper } from './style';
 
 
-const ProjectCard = ({ scrollWrapperRef }) => {
-    const letterRef = useRef();
+const DarkForestCard = ({ scrollWrapperRef }) => {
+    const letterRef = useRef(null);
 
     useEffect(() => {
         let tl = gsap.timeline({
@@ -26,9 +26,10 @@ const ProjectCard = ({ scrollWrapperRef }) => {
             autoAlpha: 0,
         });
     }, []);
+
     return (
         <PictureCardWrapper bg='white' mr='-278px' width='100%' p={{ md: '50px 60px', xl: '80px 90px', ultraWide: '150px 160px' }}>
-            <ScrollingLetter ref={letterRef} color='green' fontFamily='GraphikLight'>d.</ScrollingLetter>
+            <ScrollingLetter ref={letterRef} color='green' fontFamily='GraphikLight' left='-40px'>d.</ScrollingLetter>
             <Flex>
                 <ImgWrapper maxWidth='437px' minWidth='400px' aspect='119%' >
                     <img src={img} alt="" />
@@ -39,4 +40,4 @@ const ProjectCard = ({ scrollWrapperRef }) => {
     );
 };
 
-export default ProjectCard;
+export default DarkForestCard;

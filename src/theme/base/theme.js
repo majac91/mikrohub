@@ -38,7 +38,8 @@ const colors = {
     black: "#000000",
     green: "#A6AE7B",
     blue: "#C3D8D6",
-    brown: "#BBA998"
+    brown: "#BBA998",
+    salmon: "#E2BC9E"
 }
 
 export default {

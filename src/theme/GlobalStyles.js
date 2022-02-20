@@ -3,6 +3,12 @@ import GraphikLightOTF from "../fonts/GraphikLight.otf";
 import GraphikRegularOTF from "../fonts/GraphikRegular.otf";
 import GraphikSemiboldOTF from "../fonts/GraphikSemibold.otf";
 import GraphikBoldOTF from "../fonts/GraphikBold.otf";
+import GraphikExtralight from "../fonts/GraphikExtralight.otf";
+import GraphikExtralightItalic from "../fonts/GraphikExtralightItalic.otf";
+import GraphikMediumItalic from "../fonts/GraphikMediumItalic.otf";
+import GraphikRegularItalic from "../fonts/GraphikRegularItalic.otf";
+import GraphikSemiboldItalic from "../fonts/GraphikSemiboldItalic.otf";
+import GraphikThin from "../fonts/GraphikThin.otf";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -23,6 +29,38 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'GraphikBold';
     src: url('${GraphikBoldOTF}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikExtralight';
+    src: url('${GraphikExtralight}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikExtralightItalic';
+    src: url('${GraphikExtralightItalic}') format('opentype');
+  }
+
+
+  @font-face {
+    font-family: 'GraphikMediumItalic';
+    src: url('${GraphikMediumItalic}') format('opentype');
+  }
+
+
+  @font-face {
+    font-family: 'GraphikRegularItalic';
+    src: url('${GraphikRegularItalic}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikSemiboldItalic';
+    src: url('${GraphikSemiboldItalic}') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'GraphikThin';
+    src: url('${GraphikThin}') format('opentype');
   }
 
   * {

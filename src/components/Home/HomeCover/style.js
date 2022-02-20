@@ -4,16 +4,20 @@ import { ImgWrapper } from "../../../theme/base/media"
 
 const showImg = keyframes`
     0% { 
-        visibility: visible; z-index: 100; 
+        visibility: visible; 
+        z-index: 100; 
     }
 	12.5% { 
-        visibility: visible; z-index: 100; 
+        visibility: visible; 
+        z-index: 100; 
     }
 	25% { 
-        visibility: hidden; z-index: 0; 
+        visibility: hidden; 
+        z-index: 0; 
     }
     100% { 
-        visibility: hidden; z-index: 0; 
+        visibility: hidden; 
+        z-index: 0; 
     }
 `;
 
