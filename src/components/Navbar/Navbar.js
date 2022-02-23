@@ -8,6 +8,7 @@ import { Nav, Logo, Burger, Bars, NavMenu, NavItem, NavLink } from './style';
 import { Box } from '../../theme/base/layout';
 import ProjectsMenu from '../ProjectsMenu/ProjectsMenu';
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
@@ -45,11 +46,11 @@ const Navbar = () => {
                             <span ref={hubRef}>ub</span>
                         </Link>
                     </Logo>
-                    <Burger onClick={toggleNav}>
+                    <Burger onClick={toggleNav} display={isProjectsMenuOpen ? 'none' : 'block'}>
                         <Bars $mode={isOpen ? 'open' : 'closed'} />
                     </Burger>
                     <NavMenu ref={navMenuRef} $mode={isOpen ? 'open' : 'closed'}>
-                        <NavItem onClick={toggleNav} onClick={toggleProjectsMenu}>
+                        <NavItem onClick={toggleProjectsMenu}>
                             <NavLink to='/' disabled={true} >Projekti</NavLink>
                             {isProjectsMenuOpen && <ProjectsMenu />}
                         </NavItem>

@@ -10,7 +10,7 @@ const ProjectsMenu = () => {
     return (
 
         <ProjectMenuWrapper className={isProjectsMenuOpen ? '' : 'closed'} >
-            <Burger $menu='projects-menu'>
+            <Burger $menu='projects-menu' zIndex='103' right='76px'>
                 <Bars $mode='open' />
             </Burger>
             <Flex flexDirection='column' py={{ sm: '80px', lg: '118px' }} ml={{ sm: '36px', lg: '150px', xxl: '303px' }}>

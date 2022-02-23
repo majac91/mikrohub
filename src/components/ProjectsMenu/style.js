@@ -13,6 +13,7 @@ export const ProjectMenuWrapper = styled.div`
     overflow: auto;
     top: 0;
     left: 0;
+    z-index: 1002;
     width: 100vw;
     height: 100vh;
     background-color: ${props => props.theme.colors.white};

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { respondTo } from '../../theme/utils/respondTo';
 import fonts from '../../fonts/fonts';
 import { Link } from 'react-router-dom'
-import { layout } from "styled-system";
+import { layout, space } from "styled-system";
 
 export const Nav = styled.nav`
     display: flex;
@@ -36,7 +36,7 @@ export const NavMenu = styled.ul`
     transition-delay: 0.5s;
     transform: translateX(-100%);
     background: white;
-    z-index: 1000;
+    z-index: 101;
 
     ${respondTo.md`
         display: flex;
@@ -96,13 +96,13 @@ export const NavLink = styled(Link)`
 
 export const Burger = styled.button`
     position: absolute;
-    right: ${(props) => props.theme.space.lg};
+    right: ${(props) => props.right ? props.right : props.theme.space.lg};
     top: ${(props) => props.theme.space.xl};
     z-index: 2; 
     width: 29px;
     height: 30px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 102;
 
     ${respondTo.md`
         display: none;
@@ -121,6 +121,7 @@ export const Burger = styled.button`
     }}
 
     ${layout}
+    ${space}
 `;
 
 export const Bars = styled.span`
