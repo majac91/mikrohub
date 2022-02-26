@@ -82,6 +82,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'GraphikRegular';
     overflow: hidden;
+    position: relative;
 
     @include media-breakpoint-up(lg) {
       overflow: visible;

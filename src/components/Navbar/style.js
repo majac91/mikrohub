@@ -11,12 +11,18 @@ export const Nav = styled.nav`
     align-items: center;
     position: relative;
     padding-top: ${(props) => props.theme.space.lg};
+    padding-bottom: ${(props) => props.theme.space.xl};
+
+    ${respondTo.md`
+        padding-bottom: 0;
+    `}
 `;
 
 export const Logo = styled.div` 
     font-size: 32px;
     font-family: ${fonts.bold};
-
+    z-index: 1;
+    
     span {
         display: inline-block;
         overflow:hidden;

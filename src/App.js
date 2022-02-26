@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ProcessPage from './pages/ProcessPage';
 import Footer from './components/Footer/Footer';
+import DarkForestPage from './pages/DarkForestPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="process" element={<ProcessPage />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="dark-forest-house" element={<DarkForestPage />} />
       </Routes>
 
       <Footer />

@@ -1,6 +1,5 @@
 import { space, layout } from 'styled-system'
 
-
 import styled from "styled-components";
 
 export const ImgWrapper = styled.picture`

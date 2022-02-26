@@ -10,7 +10,7 @@ fontSizes.h1 = fontSizes[6];
 fontSizes.display1 = fontSizes[7];
 fontSizes.display2 = fontSizes[8];
 
-const breakpoints = ["480px", "568px", "768px", "992px", "1200px", "1400px", "1500px"];
+const breakpoints = ["480px", "568px", "768px", "992px", "1200px", "1400px", "1600px"];
 
 breakpoints.xs = breakpoints[0];
 breakpoints.sm = breakpoints[1];
@@ -19,7 +19,6 @@ breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
 breakpoints.xxl = breakpoints[5];
 breakpoints.ultraWide = breakpoints[6];
-
 
 const space = ["4px", "8px", "16px", "18px", "38px", "48px", "100px"];
 
