@@ -1,7 +1,6 @@
 import React from 'react';
-import img from '../../img/dark-forest/cover.jpeg'
+import img from '../../../img/dark-forest/cover.jpeg'
 import { ProjectCoverWrapper, ProjectImgWrapper, ProjectTitle } from './style'
-// import { ImgWrapper } from "../../theme/base/media.js"
 
 const ProjectCover = ({ title }) => {
     return (

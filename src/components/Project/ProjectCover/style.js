@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
-import { H1, H2 } from '../../theme/base/typography'
-import { respondTo } from '../../theme/utils/respondTo';
-import { ImgWrapper } from "../../theme/base/media.js"
+import styled from "styled-components";
+import { H1 } from '../../../theme/base/typography'
+import { respondTo } from '../../../theme/utils/respondTo';
+import { ImgWrapper } from "../../../theme/base/media.js"
 
 export const ProjectCoverWrapper = styled.div`
     max-height: 90vh;
@@ -24,7 +24,7 @@ export const ProjectCoverWrapper = styled.div`
 
 export const ProjectTitle = styled(H1)`
     width: 100%;
-    max-width: 50vw;
+    max-width: 52%;
     text-transform: uppercase;
     font-size: 70px;
     padding-left: 30px;
@@ -44,10 +44,6 @@ export const ProjectTitle = styled(H1)`
 
     `}
 
-    /* ${respondTo.lg`
-       font-size: 113px;
-    `} */
-
     ${respondTo.ultraWide`
        line-height: 0.5;
        white-space: nowrap;
@@ -63,16 +59,13 @@ export const ProjectTitle = styled(H1)`
 
         ${respondTo.md`
         max-width: calc(100vw - 110px);
-        `}
-        ${respondTo.lg`
-                max-width: calc(100vw - 220px);
-        `}
-        ${respondTo.xl`
+    `}
+    ${respondTo.xxl`
             max-width: calc(100vw - 220px);
-        `}
-        ${respondTo.xxl`
-                max-width: calc(100vw - 540px);
-        `}
+    `}
+    ${respondTo.ultraWide`
+            max-width: calc(100vw - 540px);
+    `}
     }
 `
 
@@ -90,23 +83,5 @@ export const ProjectImgWrapper = styled(ImgWrapper)`
             content: '';
             padding-bottom: 50%;
         }
-    `}
-`
-
-
-export const AboutTitle = styled(H2)`
-    width: 100%;
-    max-width: 30vw;
-    text-transform: uppercase;
-    font-size: 70px;
-    padding-bottom: 32px;
-
-    ${respondTo.md`
-        padding-bottom: unset;
-    `}
-
-    ${respondTo.xxl`
-        font-size: 143px;
-        // padding-left: 30px;
     `}
 `

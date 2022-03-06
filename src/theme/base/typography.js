@@ -63,3 +63,13 @@ export const LinkText = styled.a`
   ${fontFamily};
   ${textAlign};
 `;
+
+export const TextLeft = styled.p`
+  text-align: left;
+`
+
+export const TextRight = styled.p`
+  ${respondTo.lg`
+      text-align: right;
+  `}
+`

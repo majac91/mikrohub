@@ -9,6 +9,7 @@ import GraphikMediumItalic from "../fonts/GraphikMediumItalic.otf";
 import GraphikRegularItalic from "../fonts/GraphikRegularItalic.otf";
 import GraphikSemiboldItalic from "../fonts/GraphikSemiboldItalic.otf";
 import GraphikThin from "../fonts/GraphikThin.otf";
+import { breakpoint } from './utils/respondTo';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -84,7 +85,7 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     position: relative;
 
-    @include media-breakpoint-up(lg) {
+    @media screen and (min-width: 1200px) {
       overflow: visible;
     }
   }
@@ -101,14 +102,13 @@ const GlobalStyle = createGlobalStyle`
 
 // RESPONSIVE
 html {
-  font-size: 5vw;
 
-  @include media-breakpoint-up(xs) {
+  @media screen and (min-width: 320px) {
     font-size: 16px;
   }
 
-  @include media-breakpoint-up(xmd) {
-    font-size: 1.11vw;
+  @media screen and (min-width: 992px) {
+    font-size: 24px;
   }
 }
    .App {
@@ -159,6 +159,10 @@ html {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  .swiper-pagination-bullets {
+    position: initial;
   }
 `;
 
