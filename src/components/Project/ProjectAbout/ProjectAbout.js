@@ -6,7 +6,7 @@ import { TextRight } from '../../../theme/base/typography';
 const ProjectAbout = ({ title, children }) => {
     return (
         <Box>
-            <Flex pt={['39px', '95px']} pb={['47px', '113px']} flexDirection={{ xs: 'column', md: 'row' }} alignItems='center'>
+            <Flex pt={{ xs: '39px', md: '95px' }} pb={{ xs: '47px', md: '113px' }} flexDirection={{ xs: 'column', md: 'row' }} alignItems='center'>
                 <AboutTitle>{title}</AboutTitle>
                 <AboutText>
                     <TextRight>{children}</TextRight>

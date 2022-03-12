@@ -1,6 +1,6 @@
 import { respondTo } from '../utils/respondTo';
 import styled, { css } from "styled-components";
-import { space, layout, color, flexbox, textAlign } from 'styled-system'
+import { space, layout, color, flexbox, textAlign, position } from 'styled-system'
 
 export const Box = styled.section`
     max-width: calc(100vw - 76px);
@@ -19,6 +19,7 @@ export const Box = styled.section`
     ${layout}
     ${color}
     ${textAlign}
+    ${position}
 `;
 
 export const DarkBox = styled.div`

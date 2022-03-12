@@ -1,13 +1,17 @@
 
 import React, { useRef } from 'react';
+import DOMPurify from "dompurify";
+
 import ProjectCover from '../components/Project/ProjectCover/ProjectCover';
 import ProjectAbout from '../components/Project/ProjectAbout/ProjectAbout';
 import ProjectPlans from '../components/Project/ProjectPlans/ProjectPlans';
 import Slider from '../components/Project/Slider/Slider';
 import { ImgWrapper } from '../theme/base/media';
+import { TextRight } from '../theme/base/typography';
+import { Box } from '../theme/base/layout';
+import { AnimatedLink, LinkWrapper } from '../components/Home/Contact/style';
 
-import DOMPurify from "dompurify";
-
+import { useOnIntersection } from "../hooks/useOnIntersection";
 
 import img1 from '../img/dark-forest/osnova1.jpeg';
 import img2 from '../img/dark-forest/osnova2.jpeg';
@@ -20,8 +24,9 @@ import slide4 from '../img/dark-forest/df-slider-4.jpeg';
 import slide5 from '../img/dark-forest/df-slider-5.jpeg';
 
 
-
 const DarkForestPage = () => {
+    const contactRef = useRef();
+    const isOnScreen = useOnIntersection(contactRef);
 
     const plans = {
         plan1: {
@@ -39,23 +44,23 @@ const DarkForestPage = () => {
     const slides = [
         {
             img: slide1,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je <a href=''>jedan od pet najčitanijih članaka tokom 2021. godine</a> iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>jMini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
         },
         {
             img: slide2,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je <a href=''>jedan od pet najčitanijih članaka tokom 2021. godine</a> iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>jMini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
         },
         {
             img: slide3,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je <a href=''>jedan od pet najčitanijih članaka tokom 2021. godine</a> iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>jMini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
         },
         {
             img: slide4,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je <a href=''>jedan od pet najčitanijih članaka tokom 2021. godine</a> iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>jMini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
         },
         {
             img: slide5,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je <a href=''>jedan od pet najčitanijih članaka tokom 2021. godine</a> iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>jMini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
         }
     ]
 
@@ -70,7 +75,18 @@ const DarkForestPage = () => {
             <ImgWrapper aspect='50%'>
                 <img src={imgSection1}></img>
             </ImgWrapper>
+            <Box display={{ md: 'none' }}>
+                <TextRight mt='50px' >{plans.plan2.content}</TextRight>
+            </Box>
             <Slider slides={slides} />
+            <ImgWrapper aspect='50%'>
+                <img src={imgSection1}></img>
+            </ImgWrapper>
+            <Box pt={{ sm: '61px', lg: '392px' }} pb={{ sm: '30px', lg: '305px' }} textAlign='center' position='relative'>
+                <LinkWrapper>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="contact">Kontakt</AnimatedLink>
+                </LinkWrapper>
+            </Box>
         </>
     );
 }

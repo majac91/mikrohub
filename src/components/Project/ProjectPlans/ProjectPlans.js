@@ -2,26 +2,28 @@ import React from 'react';
 import { ImgWrapper } from '../../../theme/base/media';
 import { Box, Flex } from '../../../theme/base/layout';
 import { PlanCard } from './style';
-import { TextRight, TextLeft } from '../../../theme/base/typography';
+import { H3, TextRight, TextLeft } from '../../../theme/base/typography';
 
 const ProjectPlans = ({ plans }) => {
 
     return (
         <Box>
-            <Flex pt={['39px', '95px']} pb={['47px', '113px']} flexDirection={{ xs: 'column', md: 'row' }} flex='0 0 50%' justifyContent='space-between'>
+            <Flex pt={{ xs: '39px', md: '95px' }} pb={{ xs: '47px', md: '113px' }} flexDirection={{ xs: 'column', md: 'row' }} justifyContent='space-between'>
                 <PlanCard>
-                    <h3>{plans.plan1.title}</h3>
+                    <H3 whiteSpace='nowrap' fontSize={{ xs: '24px', md: '70px' }}>{plans.plan1.title}</H3>
                     <ImgWrapper aspect='94%'>
                         <img src={plans.plan1.img} alt='first floor plan' />
                     </ImgWrapper>
-                    <TextLeft>{plans.plan2.content}</TextLeft>
+                    <TextLeft display={{ xs: 'none', md: 'block' }}>{plans.plan1.content}</TextLeft>
                 </PlanCard>
                 <PlanCard>
-                    <h3>{plans.plan2.title}</h3>
+                    <H3 fontSize={{ xs: '24px', md: '70px' }}>{plans.plan2.title}</H3>
                     <ImgWrapper aspect='94%'>
                         <img src={plans.plan2.img} alt='first floor plan' />
                     </ImgWrapper>
-                    <TextRight>{plans.plan2.content}</TextRight>
+                    <TextRight display={{ xs: 'none', md: 'block' }}>{plans.plan2.content}</TextRight>
+                    <TextLeft display={{ md: 'none' }}>{plans.plan1.content}</TextLeft>
+
                 </PlanCard>
             </Flex >
         </Box>

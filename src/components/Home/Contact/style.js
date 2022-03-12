@@ -1,9 +1,21 @@
 import { variant } from 'styled-system'
 import styled, { css, keyframes } from "styled-components";
 import { respondTo } from '../../../theme/utils/respondTo';
-import { color, space, fontSize, layout, fontFamily, position } from "styled-system";
+import { space, fontSize, layout } from "styled-system";
 import { Link } from 'react-router-dom'
 
+
+export const LinkWrapper = styled.div`
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     height: max-content
+
+     ${space}
+`
 
 const animateFont1 = keyframes`
     0% { 
@@ -74,6 +86,8 @@ export const RegularLink = styled(LinkVariants)`
         font-size: 180px;
     `}
     ${space}
+    ${fontSize}
+
 `
 
 export const AnimatedLink = styled(RegularLink)`

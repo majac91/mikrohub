@@ -3,6 +3,6 @@ import { respondTo } from '../../../theme/utils/respondTo';
 
 export const PlanCard = styled.div`
     ${respondTo.lg`
-        max-width: 45%;
+        flex: 0 0 45%;
     `}
 `

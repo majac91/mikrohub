@@ -14,6 +14,7 @@ export const AboutTitle = styled(H2)`
         display: block;
         padding-bottom: unset;
         font-size: 9 0px;
+        font-size: 100px;
     `}
 
     ${respondTo.xxl`
@@ -23,7 +24,6 @@ export const AboutTitle = styled(H2)`
 
 export const AboutText = styled.div`
     margin-left: auto;
-    text-align: right;
 
     ${respondTo.md`
         max-width: 46%;
