@@ -1,12 +1,14 @@
 import React from 'react';
-import img from '../../../img/dark-forest/cover.jpeg'
 import { ProjectCoverWrapper, ProjectImgWrapper, ProjectTitle } from './style'
 
-const ProjectCover = ({ title }) => {
+const ProjectCover = ({ title, img }) => {
+    console.log(title)
     return (
         <ProjectCoverWrapper>
             <ProjectTitle>
-                <span>{title}</span>
+                {title.map((word, index) => {
+                    return <span key={index}>{word}</span>
+                })}
             </ProjectTitle>
             <ProjectImgWrapper>
                 <img src={img} alt="" />

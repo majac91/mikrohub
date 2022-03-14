@@ -31,8 +31,7 @@ export const ProjectTitle = styled(H1)`
     padding-bottom: 32px;
 
     ${respondTo.md`
-        max-width: unset;
-        margin: auto;
+        // margin: auto;
         position: absolute;
         bottom: 0;
         z-index: 2;
@@ -47,25 +46,28 @@ export const ProjectTitle = styled(H1)`
     ${respondTo.ultraWide`
        line-height: 0.5;
        white-space: nowrap;
-       font-size: 143px;
+       font-size: 130px;
     `}
 
-
+    
+    ${respondTo.md`
+        right: 55px;
+        left: 55px;
+    `}
+    ${respondTo.xxl`
+        right: 110px;
+        left: 110px;
+    `}
+    ${respondTo.ultraWide`
+            right: 270px;
+        left: 270px;
+    `}
+    
     span {
         width: 100%;
         display: inline-block;
         margin: auto;
         text-align: left;
-
-        ${respondTo.md`
-        max-width: calc(100vw - 110px);
-    `}
-    ${respondTo.xxl`
-            max-width: calc(100vw - 220px);
-    `}
-    ${respondTo.ultraWide`
-            max-width: calc(100vw - 540px);
-    `}
     }
 `
 

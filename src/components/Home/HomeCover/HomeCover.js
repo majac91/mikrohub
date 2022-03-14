@@ -26,10 +26,10 @@ const HomeCover = () => {
     }, []);
 
     return (
-        <Box mt={[4, 6]} pb={['70px', '160px']}>
+        <Box mt={{ xs: '40px', md: '100px' }} pb={{ xs: '70px', md: '160px' }}>
             <h1 className='visually-hidden'>Male kuće - velike ideje</h1>
-            <Flex flexDirection={['column', 'row']}>
-                <Text fontSize={['32px', null, 'h3', 'h2', 'display1']} maxWidth={[null, '200px']} mt={{ sm: '100px' }}>Male kuće</Text>
+            <Flex flexDirection={{ xs: 'column', md: 'row' }} alignItems={{ xs: 'center', md: 'unset' }}>
+                <Text fontSize={['32px', null, 'h3', 'h2', 'display1']} maxWidth={[null, '200px']} mt={{ xs: '40px', md: '100px' }} mb={{ xs: '37px', md: 'unset' }}>Male kuće</Text>
                 <HoverSlider ref={hoverSliderRef} className='animating'>
                     <HoverImg src={img1} alt="" />
                     <HoverImg src={img2} alt="" />
@@ -41,7 +41,7 @@ const HomeCover = () => {
                     <HoverImg src={img8} alt="" />
                     <HoverImg src={img9} alt="" />
                 </HoverSlider>
-                <Text fontSize={['32px', null, 'h3', 'h2', 'display1']} maxWidth={[null, '200px']} mt={{ xs: 'auto' }} mb={{ sm: '100px' }}>velike ideje</Text>
+                <Text fontSize={['32px', null, 'h3', 'h2', 'display1']} maxWidth={[null, '200px']} mt={{ xs: '32px', md: 'auto' }} mb={{ md: '100px' }}>velike ideje</Text>
             </Flex>
         </Box>
     );

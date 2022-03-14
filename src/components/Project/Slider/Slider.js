@@ -12,7 +12,7 @@ import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import { ImgWrapper } from '../../../theme/base/media';
 
-const Slider = ({ slides }) => {
+const Slider = ({ slides, aspect }) => {
 
     //init modules
     SwiperCore.use([Pagination]);
@@ -29,6 +29,8 @@ const Slider = ({ slides }) => {
                     autoHeight='true'
                     noSwiping='true'
                     noSwipingClass='imgSlider'
+                    controller={{ control: controlledSwiper }}
+
                     breakpoints={{
                         768: {
                             slidesPerView: 1,
@@ -40,27 +42,31 @@ const Slider = ({ slides }) => {
                     }}
                 >
                     {slides.map((slide, index) => {
-                        return <SwiperSlide key={index}>
-                            <ImgWrapper aspect='100%'>
-                                <img src={slide.img} alt="" />
-                            </ImgWrapper>
-                        </SwiperSlide>
+                        return (
+                            <SwiperSlide key={index}>
+                                <ImgWrapper aspect={aspect}>
+                                    <img src={slide.img} alt="" />
+                                </ImgWrapper>
+                            </SwiperSlide>
+                        )
                     })}
                 </ImgSlider>
                 <TextSlider
-                    autoHeight='true'
                     keyboard='true'
                     pagination={{
                         clickable: true,
                         type: isMobile ? 'fraction' : 'bullets',
                         el: '.pagination'
                     }}
-                    controller={{ control: controlledSwiper }}
+                    onSwiper={setControlledSwiper}
+
                 >
                     {slides.map((slide, index) => {
-                        return <SwiperSlide key={index}>
-                            <TextSlide fontFamily='GraphikLight' color='text' dangerouslySetInnerHTML={{ __html: slide.text }} />
-                        </SwiperSlide>
+                        return (
+                            <SwiperSlide key={index}>
+                                <TextSlide fontFamily='GraphikLight' color='text' dangerouslySetInnerHTML={{ __html: slide.text }} />
+                            </SwiperSlide>
+                        )
                     })}
                     <CustomPagination fontFamily='GraphikLight' fontSize={{ xs: '24px', md: '55px' }} color='text' className='pagination'></CustomPagination>
                 </TextSlider>

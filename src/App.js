@@ -11,6 +11,8 @@ import ProjectsPage from './pages/ProjectsPage';
 import ProcessPage from './pages/ProcessPage';
 import Footer from './components/Footer/Footer';
 import DarkForestPage from './pages/DarkForestPage';
+import RuralHousePage from './pages/RuralHousePage';
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="dark-forest-house" element={<DarkForestPage />} />
+        <Route path="rural-house" element={<RuralHousePage />} />
       </Routes>
 
       <Footer />

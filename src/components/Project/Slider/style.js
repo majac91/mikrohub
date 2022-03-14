@@ -37,7 +37,6 @@ export const TextSlide = styled.p`
         max-width: 491px;
         text-align: right;
         line-height: 48px;
-        font-size: 42px;
     `}
 
     a {
@@ -46,6 +45,7 @@ export const TextSlide = styled.p`
     }
 
     ${fontFamily}
+    ${fontSize}
     ${color}
 `
 
@@ -65,6 +65,8 @@ export const CustomPagination = styled.div`
     &.swiper-pagination-bullets {
         position: static;
         bottom: unset;
+        margin-right: -12px;
+        width: auto;
 
     }
 
@@ -92,12 +94,14 @@ export const CustomPagination = styled.div`
    .swiper-pagination-bullet {
     counter-increment: slides-counter;
     text-align: right;
+    margin: -12px;
+
 
         &:before {            
             ${respondTo.md`
                 content: counters(slides-counter, " ", decimal-leading-zero);
                 font-size: 55px;
-                margin-right: 25px;
+                padding: 0 12px;
             `}
         }
    }

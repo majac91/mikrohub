@@ -13,6 +13,7 @@ import { AnimatedLink, LinkWrapper } from '../components/Home/Contact/style';
 
 import { useOnIntersection } from "../hooks/useOnIntersection";
 
+import coverImg from '../img/dark-forest/cover.jpeg'
 import img1 from '../img/dark-forest/osnova1.jpeg';
 import img2 from '../img/dark-forest/osnova2.jpeg';
 import imgSection1 from '../img/dark-forest/dark-forest-section1.jpeg';
@@ -66,25 +67,25 @@ const DarkForestPage = () => {
 
     return (
         <>
-            <ProjectCover title='Dark forest kuća' />
+            <ProjectCover img={coverImg} title={['Dark forest', 'kuća']} />
             <ProjectAbout title='Dark forest kuća'>
                 <p>Darkforest kuća nalazi se na obroncima Stare planine i osmišljena je kao prostor zа odmor i rad u senovitom, šumskom okruženju. Polazište za dizajn bila je ideja o relativiziranju granica između spoljašnjeg i unutrašnjeg prostora. Velike staklene površine i krovni prozori, svetlo drvo koje se iz enterijera prostire do ivice trema, sto za ručavanje koji se nastavlja na tremu povezuju dva prostora stvarajući iluziju jedinstva. Zglobna konstrukcija zaštitnih prozorskih panela pruža raznovrsne mogućnosti otvaranja, a letvičasti raster stvara posebnu zasenjenu atmosferu enterijera.</p>
                 <p> Darkforest kuća je osvojila <a href=''>drugu nagradu na internacionalnom konkursu Mini home 2021. godine.</a></p>
             </ProjectAbout>
             <ProjectPlans plans={plans}></ProjectPlans>
             <ImgWrapper aspect='50%'>
-                <img src={imgSection1}></img>
+                <img src={imgSection1} />
             </ImgWrapper>
             <Box display={{ md: 'none' }}>
                 <TextRight mt='50px' >{plans.plan2.content}</TextRight>
             </Box>
-            <Slider slides={slides} />
+            <Slider slides={slides} aspect='100%' />
             <ImgWrapper aspect='50%'>
-                <img src={imgSection1}></img>
+                <img src={imgSection1} />
             </ImgWrapper>
-            <Box pt={{ sm: '61px', lg: '392px' }} pb={{ sm: '30px', lg: '305px' }} textAlign='center' position='relative'>
+            <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="contact">Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>

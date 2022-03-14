@@ -66,12 +66,13 @@ export const Text = styled.p`
 
 export const LinkText = styled.a`
   text-decoration: underline;
-  display: block;
+  display: inline-block;
 
   ${space};
   ${fontSize};
   ${fontFamily};
   ${textAlign};
+  ${layout}
 `;
 
 export const TextLeft = styled.p`
