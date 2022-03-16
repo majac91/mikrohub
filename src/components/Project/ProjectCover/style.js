@@ -9,6 +9,7 @@ export const ProjectCoverWrapper = styled.div`
     width: 100%;
     position: relative;
     overflow-y: clip;
+    margin-top: 43px;
 
     &:after {
         content: '';
@@ -20,6 +21,10 @@ export const ProjectCoverWrapper = styled.div`
         position: absolute;
         top: 0;
     }
+
+    ${respondTo.md`
+        margin-top: unset;
+    `}
 `
 
 export const ProjectTitle = styled(H1)`
@@ -54,6 +59,7 @@ export const ProjectTitle = styled(H1)`
         right: 55px;
         left: 55px;
     `}
+
     ${respondTo.xxl`
         right: 110px;
         left: 110px;

@@ -29,8 +29,6 @@ const Slider = ({ slides, aspect }) => {
                     autoHeight='true'
                     noSwiping='true'
                     noSwipingClass='imgSlider'
-                    controller={{ control: controlledSwiper }}
-
                     breakpoints={{
                         768: {
                             slidesPerView: 1,
@@ -58,8 +56,7 @@ const Slider = ({ slides, aspect }) => {
                         type: isMobile ? 'fraction' : 'bullets',
                         el: '.pagination'
                     }}
-                    onSwiper={setControlledSwiper}
-
+                    controller={{ control: controlledSwiper }}
                 >
                     {slides.map((slide, index) => {
                         return (

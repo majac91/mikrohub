@@ -12,6 +12,7 @@ import ProcessPage from './pages/ProcessPage';
 import Footer from './components/Footer/Footer';
 import DarkForestPage from './pages/DarkForestPage';
 import RuralHousePage from './pages/RuralHousePage';
+import AshwoodHousePage from './pages/AshwoodHousePage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="about" element={<AboutPage />} />
         <Route path="dark-forest-house" element={<DarkForestPage />} />
         <Route path="rural-house" element={<RuralHousePage />} />
+        <Route path="ashwood-house" element={<AshwoodHousePage />} />
       </Routes>
 
       <Footer />

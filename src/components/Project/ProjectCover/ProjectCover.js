@@ -2,7 +2,7 @@ import React from 'react';
 import { ProjectCoverWrapper, ProjectImgWrapper, ProjectTitle } from './style'
 
 const ProjectCover = ({ title, img }) => {
-    console.log(title)
+
     return (
         <ProjectCoverWrapper>
             <ProjectTitle>

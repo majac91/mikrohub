@@ -113,11 +113,14 @@ export const Burger = styled.button`
         switch (props.$menu) {
             case "projects-menu":
                 return css`
-                    ${respondTo.md`
-        display: block;
-    `};
+                    z-index: 103;
+                    right: 38px;
 
-        `;
+                    ${respondTo.md`
+                    display: block;
+                    `};
+
+                `;
         }
     }}
 

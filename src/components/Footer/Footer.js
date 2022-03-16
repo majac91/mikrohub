@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <Box textAlign='center'>
             <Text fontFamily='GraphikLight' fontSize={[0, 2]}>© mikro.hhub</Text>
-            <Text fontFamily='GraphikLight' fontSize={[0, 2]}> made with
+            <Text fontFamily='GraphikLight' fontSize={[0, 2]}> made with love
             {/* <label>
                     <input type="checkbox" />
                     <svg viewBox="0 0 532 532">
@@ -17,7 +17,7 @@ const Footer = () => {
                     </svg>
                     <span></span>
                 </label> */}
-            by majacvetkovic</Text>
+             by majacvetkovic</Text>
         </Box>
     );
 }

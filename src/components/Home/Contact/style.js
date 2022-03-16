@@ -1,7 +1,7 @@
 import { variant } from 'styled-system'
 import styled, { css, keyframes } from "styled-components";
 import { respondTo } from '../../../theme/utils/respondTo';
-import { space, fontSize, layout, flex } from "styled-system";
+import { space, fontSize, layout, flex, position } from "styled-system";
 import { Link } from 'react-router-dom'
 
 
@@ -91,5 +91,6 @@ export const AnimatedLink = styled(RegularLink)`
     &&.anim-start {
         animation: ${animateFont1} 2s linear forwards;
     }
+    ${position}
 `;
 

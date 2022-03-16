@@ -35,7 +35,7 @@ const Navbar = () => {
     };
 
     return (
-        <ProjectMenuProvider value={{ isProjectsMenuOpen, toggleProjectsMenu }}>
+        <ProjectMenuProvider value={{ isProjectsMenuOpen }}>
             <Box>
                 <Nav className={isOpen && 'open'}>
                     <Logo>
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <NavMenu ref={navMenuRef} $mode={isOpen ? 'open' : 'closed'}>
                         <NavItem onClick={toggleProjectsMenu}>
                             <NavLink to='/' disabled={true} >Projekti</NavLink>
-                            {isProjectsMenuOpen && <ProjectsMenu />}
+                            {isProjectsMenuOpen && <ProjectsMenu onClick={toggleNav} />}
                         </NavItem>
                         <NavItem onClick={toggleNav}>
                             <NavLink to="process">Proces</NavLink>

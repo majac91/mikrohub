@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ProjectMenuContext = React.createContext({
     isOpen: false,
-    toggleOpen: () => { }
+    toggleOpen: (isOpen) => !isOpen
 });
 
 export const ProjectMenuProvider = ProjectMenuContext.Provider;

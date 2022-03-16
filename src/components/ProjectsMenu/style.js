@@ -62,6 +62,8 @@ export const DarkForestLink = styled(ProjectLink)`
         width: 446px;
         height: 446px;
     }
+
+    ${space}
 `
 
 
@@ -73,6 +75,8 @@ export const AshwoodLink = styled(ProjectLink)`
         width: 399px;
         height: 399px;;
     }
+
+    ${space}
 `
 
 export const RuralLink = styled(ProjectLink)`

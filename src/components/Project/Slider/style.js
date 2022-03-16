@@ -9,7 +9,7 @@ import { fontFamily, fontSize, color } from 'styled-system';
 export const SliderWrapper = styled.div`
     ${respondTo.md`
         display: flex;
-        align-items: center;
+        align-items: flex-end;
     `}
 `
 
@@ -36,7 +36,6 @@ export const TextSlide = styled.p`
         margin-left: auto;
         max-width: 491px;
         text-align: right;
-        line-height: 48px;
     `}
 
     a {
