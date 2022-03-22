@@ -7,7 +7,6 @@ import { ProjectMenuContext } from '../Navbar/project-menu-context';
 const ProjectsMenu = (toggleNav) => {
     const { isProjectsMenuOpen } = useContext(ProjectMenuContext);
 
-    console.log('render')
     return (
 
         <ProjectMenuWrapper className={isProjectsMenuOpen ? 'open' : 'closed'} >

@@ -52,7 +52,6 @@ export const H3 = styled.h3`
 `;
 
 export const Text = styled.p`
-  font-size: ${(props) => props.theme.fontSizes.p};
 
   ${typography};
   ${color};
@@ -86,7 +85,7 @@ export const TextLeft = styled.p`
   ${space}
 `
 
-export const TextRight = styled.p`
+export const TextRight = styled.div`
   font-family: 'GraphikLight';
 
   ${respondTo.lg`

@@ -117,7 +117,8 @@ export const Burger = styled.button`
                     right: 38px;
 
                     ${respondTo.md`
-                    display: block;
+                        display: block;
+                        right: 78px;
                     `};
 
                 `;

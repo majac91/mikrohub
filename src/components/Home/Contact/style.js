@@ -1,7 +1,7 @@
 import { variant } from 'styled-system'
 import styled, { css, keyframes } from "styled-components";
 import { respondTo } from '../../../theme/utils/respondTo';
-import { space, fontSize, layout, flex, position } from "styled-system";
+import { space, fontSize, textAlign, position } from "styled-system";
 import { Link } from 'react-router-dom'
 
 
@@ -63,6 +63,9 @@ export const LinkVariants = styled(Link)(
             light: {
                 fontFamily: 'GraphikThin',
             },
+            lightItalic: {
+                fontFamily: 'GraphikExtralightItalic',
+            },
             italic: {
                 fontFamily: 'GraphikRegularItalic',
             },
@@ -70,6 +73,9 @@ export const LinkVariants = styled(Link)(
                 fontFamily: 'GraphikBold',
                 textDecoration: 'underline',
             },
+            boldNoUnderline: {
+                fontFamily: 'GraphikBold',
+            }
         }
     })
 );
@@ -84,7 +90,9 @@ export const RegularLink = styled(LinkVariants)`
     `}
 
     ${space}
+    ${space}
     ${fontSize}
+    ${textAlign}
 `
 
 export const AnimatedLink = styled(RegularLink)`
@@ -93,4 +101,19 @@ export const AnimatedLink = styled(RegularLink)`
     }
     ${position}
 `;
+
+export const ContactLink = styled.a`
+        font-family: 'GraphikBold';
+        text-decoration: underline;
+        font-size: 32px;
+        display: block;
+        margin: auto;
+        text-align: center;
+
+        ${respondTo.lg`
+        font-size: 100px;
+    `}
+
+    ${space}
+`
 
