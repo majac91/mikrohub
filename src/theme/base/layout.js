@@ -9,10 +9,10 @@ export const Box = styled.section`
     ${respondTo.md`
         max-width: calc(100vw - 110px);
     `}
-    ${respondTo.xxl`
+    ${respondTo.xl`
             max-width: calc(100vw - 220px);
     `}
-    ${respondTo.ultraWide`
+    ${respondTo.xxl`
             max-width: calc(100vw - 540px);
     `}
     ${space}

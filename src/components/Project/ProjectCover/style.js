@@ -36,7 +36,6 @@ export const ProjectTitle = styled(H1)`
     padding-bottom: 32px;
 
     ${respondTo.md`
-        // margin: auto;
         position: absolute;
         bottom: 0;
         z-index: 2;
@@ -45,28 +44,21 @@ export const ProjectTitle = styled(H1)`
         padding-bottom: unset;
         padding-left: unset;
         font-size: 113px;
-
-    `}
-
-    ${respondTo.ultraWide`
-       line-height: 0.5;
-       white-space: nowrap;
-       font-size: 130px;
-    `}
-
-    
-    ${respondTo.md`
         right: 55px;
         left: 55px;
     `}
 
-    ${respondTo.xxl`
+    ${respondTo.xl`
         right: 110px;
         left: 110px;
     `}
-    ${respondTo.ultraWide`
-            right: 270px;
+
+    ${respondTo.xxl`
+        right: 270px;
         left: 270px;
+        white-space: nowrap;
+        font-size: 130px;
+        line-height: 0.5;
     `}
     
     span {

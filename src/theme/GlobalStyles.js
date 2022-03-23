@@ -84,12 +84,21 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'GraphikRegular';
     overflow: hidden;
     position: relative;
+    color: black;
+    background-color: ${(props) => props.theme.colors.white};
 
     @media screen and (min-width: 1200px) {
       overflow: visible;
     }
   }
 
+  .dark-body {
+    background-color: ${(props) => props.theme.colors.text};
+
+    > * {
+      color: white!important;
+    }
+  }
 
   html {
     overflow-y: scroll;
@@ -97,6 +106,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     width: 100vw;
     background-color: $page-background-color;
+    scroll-behavior: smooth;
   }
 
 

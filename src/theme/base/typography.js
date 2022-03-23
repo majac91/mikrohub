@@ -97,5 +97,34 @@ export const TextRight = styled.div`
   ${maxWidth}
   ${layout}
   ${space}
+`
 
+
+
+export const OrderedListWrapper = styled.ol`
+  counter-reset: slides-counter;
+
+  ${fontSize};
+  ${fontFamily};
+  ${maxWidth}
+  ${layout}
+  ${space}
+`
+
+export const OrderedListItem = styled.li`
+  counter-increment: slides-counter;
+  &:before {            
+          ${respondTo.md`
+              content: counter(slides-counter, decimal-leading-zero) ".";
+              font-size: 100px;
+              padding: 0 12px;
+              opacity: 0.2;
+              margin-right: '30px'
+          `}
+      }
+  ${fontSize};
+  ${fontFamily};
+  ${maxWidth}
+  ${layout}
+  ${space}
 `

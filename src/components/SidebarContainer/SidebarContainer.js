@@ -1,17 +1,17 @@
 import React from 'react';
-import { Box, Flex } from '../../theme/base/layout';
+import { Flex } from '../../theme/base/layout';
 import { SidebrWrapper, Sidebar, SidebarContent } from './style';
-import { H1 } from '../../theme/base/typography';
 
-const SidebarContainer = ({ children }) => {
+const SidebarContainer = ({ children, title }) => {
 
     return (
         <SidebrWrapper>
             <Sidebar>
                 <h1>
-                    <Flex flexDirection='column'>
-                        <span>mikro.</span>
-                        <span>hhub</span>
+                    <Flex mt='150px' flexDirection='column'>
+                        {title.map((word, index) => {
+                            return <span key={index}>{word}</span>
+                        })}
                     </Flex>
                 </h1>
             </Sidebar>

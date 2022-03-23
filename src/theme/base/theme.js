@@ -10,7 +10,7 @@ fontSizes.h1 = fontSizes[6];
 fontSizes.display1 = fontSizes[7];
 fontSizes.display2 = fontSizes[8];
 
-const breakpoints = ["320px", "568px", "768px", "992px", "1200px", "1400px", "1600px"];
+const breakpoints = ["320px", "568px", "768px", "992px", "1200px", "1400px", "1900px"];
 
 breakpoints.xs = breakpoints[0];
 breakpoints.sm = breakpoints[1];

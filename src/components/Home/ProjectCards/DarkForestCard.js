@@ -31,13 +31,13 @@ const DarkForestCard = ({ scrollWrapperRef }) => {
     }, []);
 
     return (
-        <PictureCardWrapper bg='white' mr={{ lg: '-278px' }} width='100%' p={{ md: '50px 60px', xl: '80px 90px', ultraWide: '150px 160px' }}>
+        <PictureCardWrapper bg='white' mr={{ lg: '-278px' }} width='100%' p={{ md: '50px 60px', xl: '80px 90px', xxl: '150px 160px' }}>
             <ScrollingLetter ref={letterRef} color='green' fontFamily='GraphikLight' left='-40px'>d.</ScrollingLetter>
             <Flex>
                 <ImgWrapper maxWidth={{ lg: '437px' }} minWidth={{ lg: '400px' }} aspect='119%' >
                     <img src={img} alt="" />
                 </ImgWrapper>
-                <VerticalText color='green' fontSize='h1' ml='xxl' display={{ xl: 'none', ultraWide: 'block' }}>Darkforest kuća</VerticalText>
+                <VerticalText color='green' fontSize='h1' ml='xxl' display={{ xl: 'none', xxl: 'block' }}>Darkforest kuća</VerticalText>
             </Flex >
         </PictureCardWrapper >
     );

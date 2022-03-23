@@ -7,7 +7,7 @@ export const breakpoint = {
   lg: '992px',
   xl: '1200px',
   xxl: '1400px',
-  ultraWide: '1600px'
+  ultraWide: '1900px'
 
 };
 

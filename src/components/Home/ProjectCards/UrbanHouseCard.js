@@ -31,9 +31,9 @@ const UrbanHouseCard = ({ scrollWrapperRef }) => {
     }, []);
 
     return (
-        <PictureCardWrapper bg='white' ml={{ lg: '-278px' }} width='100%' p={{ md: '50px 60px', xl: '80px 90px', ultraWide: '150px 160px' }}>
+        <PictureCardWrapper bg='white' ml={{ lg: '-278px' }} width='100%' p={{ md: '50px 60px', xl: '80px 90px', xxl: '150px 160px' }}>
             <Flex>
-                <VerticalText color='salmon' fontSize='h1' ml='xxl' display={{ xl: 'none', ultraWide: 'block' }}>Urbana kuća</VerticalText>
+                <VerticalText color='salmon' fontSize='h1' ml='xxl' display={{ xl: 'none', xxl: 'block' }}>Urbana kuća</VerticalText>
                 <ImgWrapper maxWidth='437px' minWidth='400px' aspect='119%' ml='auto'>
                     <img src={img} alt="" />
                 </ImgWrapper>
