@@ -74,7 +74,7 @@ export const LinkText = styled.a`
   ${layout}
 `;
 
-export const TextLeft = styled.p`
+export const TextLeft = styled.div`
   text-align: left;
   font-family: 'GraphikLight';
 

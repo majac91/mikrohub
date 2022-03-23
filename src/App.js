@@ -13,6 +13,7 @@ import Footer from './components/Footer/Footer';
 import DarkForestPage from './pages/DarkForestPage';
 import RuralHousePage from './pages/RuralHousePage';
 import AshwoodHousePage from './pages/AshwoodHousePage';
+import UrbanHousePage from './pages/UrbanHousePage';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="dark-forest-house" element={<DarkForestPage />} />
         <Route path="rural-house" element={<RuralHousePage />} />
         <Route path="ashwood-house" element={<AshwoodHousePage />} />
+        <Route path="urban-house" element={<UrbanHousePage />} />
       </Routes>
 
       <Footer />
