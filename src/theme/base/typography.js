@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { color, typography, maxWidth, space, fontSize, flexbox, layout, fontFamily, textAlign, whiteSpace } from "styled-system";
 import { respondTo } from "../utils/respondTo";
+import { Link } from 'react-router-dom';
 
 export const H1 = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.h5};

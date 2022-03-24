@@ -7,6 +7,8 @@ export const ImgWrapper = styled.picture`
     overflow: hidden;
     display: block;
     width: 100%;
+    transform: scale(${(props) => props.scale});
+
 
     &:before {
         content: '';

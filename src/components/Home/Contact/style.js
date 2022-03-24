@@ -96,15 +96,28 @@ export const RegularLink = styled(LinkVariants)`
 `
 
 export const AnimatedLink = styled(RegularLink)`
+        /* &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 0;
+            height: 2px;
+        } */
+
     &&.anim-start {
         animation: ${animateFont1} 2s linear forwards;
+        /* &:after {
+            width: 100%;
+            background-color: black;
+        } */
     }
     ${position}
 `;
 
 export const ContactLink = styled.a`
         font-family: 'GraphikBold';
-        text-decoration: underline;
+        /* text-decoration: underline; */
         font-size: 32px;
         display: block;
         margin: auto;

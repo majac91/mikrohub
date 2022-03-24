@@ -41,8 +41,6 @@ const RuralHousePage = () => {
         }
     }
 
-
-
     return (
         <>
             <ProjectCover img={coverImg} title={['Urbana', 'kuća']} />

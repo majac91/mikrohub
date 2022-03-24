@@ -26,7 +26,7 @@ export const HoverImg = styled.img`
 	left: 0px;
 	position: absolute;
     height: 100%;
-	animation: ${showImg} 1s linear infinite 0s forwards;
+	animation: ${showImg} 1.8s linear infinite 0s forwards;
 	animation-play-state: paused;	
     object-fit: cover;
 `;
@@ -52,47 +52,47 @@ export const HoverSlider = styled(ImgWrapper)`
     }
 
     & ${HoverImg}:nth-of-type(2) {
-        animation-delay: 0.1s;
+        animation-delay: 0.2s;
         z-index: 18;
     }
 
     & ${HoverImg}:nth-of-type(3) {
-        animation-delay: 0.2s;
-        z-index: 17;
-    }
-
-    & ${HoverImg}:nth-of-type(4) {
-        animation-delay: 0.3s;
-        z-index: 18;
-    }
-
-    & ${HoverImg}:nth-of-type(5) {
         animation-delay: 0.4s;
         z-index: 17;
     }
 
+    & ${HoverImg}:nth-of-type(4) {
+        animation-delay: 0.6s;
+        z-index: 18;
+    }
+
     & ${HoverImg}:nth-of-type(5) {
-        animation-delay: 0.5s;
+        animation-delay: 0.8s;
+        z-index: 17;
+    }
+
+    & ${HoverImg}:nth-of-type(5) {
+        animation-delay: 1s;
         z-index: 16;
     }
 
     & ${HoverImg}:nth-of-type(6) {
-        animation-delay: 0.6s;
+        animation-delay: 1.2s;
         z-index: 15;
     }
 
     & ${HoverImg}:nth-of-type(7) {
-        animation-delay: 0.7s;
+        animation-delay: 1.4s;
         z-index: 14;
     }
 
     & ${HoverImg}:nth-of-type(8) {
-        animation-delay: 0.8s;
+        animation-delay: 1.6s;
         z-index: 13;
     }
 
     & ${HoverImg}:nth-of-type(9) {
-        animation-delay: 0.9s;
+        animation-delay: 1.8s;
         z-index: 12;
     }
 

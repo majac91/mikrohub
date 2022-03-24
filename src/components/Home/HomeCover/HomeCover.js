@@ -13,13 +13,16 @@ import img7 from "../../../img/homepage/landingpage_skroll_-6.jpg"
 import img8 from "../../../img/homepage/landingpage_skroll_-7.jpg"
 import img9 from "../../../img/homepage/landingpage_skroll_-8.jpg"
 
+
 const HomeCover = () => {
     const hoverSliderRef = useRef();
+
+
 
     useEffect(() => {
         setTimeout(() => {
             hoverSliderRef.current.classList.remove('animating');
-        }, 1000);
+        }, 1800);
         return () => {
 
         };
@@ -29,6 +32,7 @@ const HomeCover = () => {
         <Box mt={{ md: '100px' }} pb={{ xs: '70px', md: '160px' }}>
             <h1 className='visually-hidden'>Male kuće - velike ideje</h1>
             <Flex flexDirection={{ xs: 'column', md: 'row' }} alignItems={{ xs: 'center', md: 'unset' }}>
+
                 <Text fontSize={['32px', null, 'h3', 'h2', 'display1']} maxWidth={[null, '200px']} mt={{ xs: '40px', md: '100px' }} mb={{ xs: '37px', md: 'unset' }}>Male kuće</Text>
                 <HoverSlider ref={hoverSliderRef} className='animating'>
                     <HoverImg src={img1} alt="" />

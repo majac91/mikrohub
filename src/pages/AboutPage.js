@@ -14,7 +14,6 @@ const AboutPage = () => {
                     <Text pb='34px' fontSize={{ xxs: '16px', md: '24px' }}>Svaki novi projekat za nas predstavlja izazov i priliku da istražimo nove pristupe u stvaranju savremenih, ekološki odgovornih projekata.</Text>
                     <Text pb='34px' fontSize={{ xxs: '16px', md: '24px' }}>mikro.hhub čine arhitektice Ana Curk I Sanja Cvetković.</Text>
                 </TextRight>
-                {/* <Text mt={{ xxs: '', md: '125px;' }}>SCROL DOWN</Text> */}
                 <Flex flexDirection='column' mt={{ xxs: '', md: '125px;' }}>
                     <RegularLink to="projects" variant='light' textAlign={['left', 'left', 'right']}>Naši projekti</RegularLink>
                     <RegularLink to="process" variant='lightItalic' textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>

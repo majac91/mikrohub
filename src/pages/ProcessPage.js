@@ -44,7 +44,6 @@ const ProcessPage = () => {
                             </OrderedListItem>
                         </OrderedListWrapper>
                     </TextRight>
-                    {/* <Text mt={{ xxs: '', md: '125px;' }}>SCROL DOWN</Text> */}
                 </SidebarContainer>
             </Box >
             <Text fontFamily='GraphikLight' maxWidth='519px' m='136px auto' textAlign='center'>Stvaralački proces koji se zasniva na empatiji, otvorenoj komunikaciji i sagledavanju potencijalnih izazova donosi nezaboravne rezultate.</Text>

@@ -9,6 +9,8 @@ import { CSSPlugin } from 'gsap/CSSPlugin'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from 'gsap';
 
+
+
 gsap.registerPlugin(CSSPlugin)
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(
