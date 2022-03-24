@@ -1,7 +1,6 @@
-import { variant } from 'styled-system'
 import styled, { css, keyframes } from "styled-components";
 import { respondTo } from '../../../theme/utils/respondTo';
-import { space, fontSize, textAlign, position } from "styled-system";
+import { space, variant, fontSize, textAlign, position, flexbox, layout } from "styled-system";
 import { Link } from 'react-router-dom'
 
 
@@ -117,16 +116,22 @@ export const AnimatedLink = styled(RegularLink)`
 
 export const ContactLink = styled.a`
         font-family: 'GraphikBold';
-        /* text-decoration: underline; */
-        font-size: 32px;
+        text-decoration: underline;
+        font-size: 40px;
         display: block;
         margin: auto;
         text-align: center;
 
         ${respondTo.lg`
-        font-size: 100px;
-    `}
+            font-size: 70px;
+        `}
+
+        ${respondTo.xxl`
+            font-size: 100px;
+        `}
 
     ${space}
+    ${flexbox}
+    ${layout}
 `
 

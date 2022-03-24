@@ -14,10 +14,14 @@ export const AboutTitle = styled(H2)`
         display: block;
         padding-bottom: unset;
         font-size: 9 0px;
-        font-size: 100px;
+        font-size: 70px;
     `}
 
     ${respondTo.xxl`
+        font-size: 100px;
+    `}
+
+    ${respondTo.ultraWide`
         font-size: 130px;
     `}
 `

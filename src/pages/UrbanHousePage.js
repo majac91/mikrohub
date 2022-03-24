@@ -49,22 +49,19 @@ const RuralHousePage = () => {
             </ProjectAbout>
             <ProjectPlans plans={plans}></ProjectPlans>
             <Box display={{ md: 'none' }}>
-                <TextRight mt='50px' >{plans.plan1.content}</TextRight>
-            </Box>
-            <Box display={{ md: 'none' }}>
                 <TextRight mt='50px' >{plans.plan2.content}</TextRight>
             </Box>
             <Box>
-                <Flex alignItems='flex-end' justifyContent='space-between' flexDirection={{ xxs: 'column', xl: 'row' }}>
+                <Flex alignItems='flex-end' justifyContent='space-between' flexDirection={{ xxs: 'column', md: 'row' }} mt={{ xxs: '40px', md: 'unset' }}>
                     <ImgWrapper aspect='100%' maxWidth={{ md: '57%' }}>
                         <img src={gif1}></img>
                     </ImgWrapper>
-                    <TextRight maxWidth={{ md: '30%' }} >
+                    <TextRight maxWidth={{ md: '50%', ultraWide: '30%' }} ml={{ md: '60px', ultraWide: '115px' }}>
                         <Text mt={{ xxs: '40px', md: 'unset' }}>Urbana kuća je spolja obložena prefabrikovanom ljuskom od fiberglass materijala, i tretirana je belom bojom koja reflektuje do 98% sunčeve energije, čime se izbegava pregrevanje prostora i gubljenje resursa. Trem kuće prekriven je pločama od plute i travnatim površinama, koje takođe umanjuju pregrevanje. Ugrađenim olucima kišnica se skuplja i skladišti u rezervoarima, a potom koristi kao tehnička voda i voda za zalivanje. Na krovu se nalazi bojler za pasivno grejanje. Smicanjem krovnih ravni dobijen je prozor koji stvara takozvani efekat dimnjaka i omogućava pasivnu termoregulaciju prostora.</Text>
                     </TextRight>
                 </Flex>
                 <Flex alignItems='flex-end' justifyContent='space-between' mt={{ xxs: '40px', md: '104px' }} flexDirection={{ xxs: 'column-reverse', xl: 'row' }}>
-                    <TextLeft maxWidth={{ md: '30%' }} >
+                    <TextLeft maxWidth={{ md: '50%', ultraWide: '30%' }} mr={{ md: '60px', ultraWide: '115px' }}>
                         <Text mt={{ xxs: '40px', md: 'unset' }}>Kako bi kuća aktivno učestvovala u prečišćavanju vazduha, instalirani su posebni bioreaktori sa mikroalgama, koji spadaju u inovativne sisteme i deo su aktuelnih istraživanja u ovoj oblasti. Vazduh ulazi u sistem pri dnu bioreaktora, biva prečišćen prolazeći kroz module sa mikroalgama koje koriste ugljen-dioksid i druge polutante za svoju prehranu, i kao rezultat, na vrhu svakog modula oslobađa se čist kiseonik. Kako bi uslovi za razvoj mikroalgi bili optimalni, u dnu panela nalaze se rezervoar sa nutrijentima, pumpa i termoregulator vode, a između zida i panela se nalaze led diode koje omogućavaju mikroalgama da prežive i bez sunčevog svetla. Na krovu objekta su i solarni paneli sa algama koji u procesu fotosinteze sunčevu energiju pretvaraju u biomasu koja se konvertuje u električnu energiju.</Text>
                     </TextLeft>
                     <ImgWrapper aspect='100%' maxWidth={{ md: '57%' }}>
@@ -75,12 +72,12 @@ const RuralHousePage = () => {
                     <ImgWrapper aspect='100%' maxWidth={{ md: '57%' }}>
                         <img src={gif3}></img>
                     </ImgWrapper>
-                    <TextRight maxWidth={{ md: '30%' }} >
+                    <TextRight maxWidth={{ md: '50%', ultraWide: '30%' }} ml={{ md: '60px', ultraWide: '115px' }}>
                         <Text mt={{ xxs: '40px', md: 'unset' }}>Unutrašnjost zidova je obložena panelima od plute, održivim materijalom koji pruža dodatnu termalnu I zvučnu izolaciju. Za podnu oblogu je izabran terrazzo koji je napravljen sa drvenim opiljcima i sadrži 65% recikliranih materija, dok je za oblogu niša odabran terrazzo koji je napravljen sa ostatcima mermera i sadrži 87% recikliranog materijala.</Text>
                     </TextRight>
                 </Flex>
                 <Flex alignItems='flex-end' justifyContent='space-between' mt={{ xxs: '40px', md: '104px' }} flexDirection={{ xxs: 'column-reverse', xl: 'row' }}>
-                    <TextLeft maxWidth={{ md: '30%' }} >
+                    <TextLeft maxWidth={{ md: '50%', ultraWide: '30%' }} mr={{ md: '60px', ultraWide: '115px' }}>
                         <Text mt={{ xxs: '40px', md: 'unset' }}>U niši objekta nalaze se biljke koje prečišćavaju vazduh, pomažu u termoregulaciji prostora, a vodu za zalivanje dobijaju iz rezervoara za sakupljanje kišnice. Odabrani komadi nameštaja, inspirisani skandinavskim dizajnom, su standardnih dimenzija što predstavlja pravi luksuz za jednu mikro kuću. Smeštanjem neophodnih sadržaja u niše zidova, budući korisnici imaju fleksibilnost da prilagode čist prostor prizemlja i galerije svojim potrebama.</Text>
                     </TextLeft>
                     <ImgWrapper aspect='100%' maxWidth={{ md: '57%' }}>
@@ -91,7 +88,7 @@ const RuralHousePage = () => {
                     <ImgWrapper aspect='100%' maxWidth={{ md: '57%' }}>
                         <img src={gif5}></img>
                     </ImgWrapper>
-                    <TextRight maxWidth={{ md: '30%' }} >
+                    <TextRight maxWidth={{ md: '50%', ultraWide: '30%' }} ml={{ md: '60px', ultraWide: '115px' }}>
                         <Text mt={{ xxs: '40px', md: 'unset' }} mb={{ xxs: '40px', md: 'unset' }}>Urbana kuća predstavlja kompleksan ‘organizam’ kombinovanih sistema sa nesvakidašnjim tehnologijama, koja minimalnim i promišljenim dizajnom stvara atmosferu topline doma u jako malom prostoru i u izazovnim uslovima. Stalna promeljivost zasićenosti panela mikroagama kreira dinamičnu fasadu i garantuje da će svaki objekat imati unikatan detalj, iako je Urbana kuća spremna za masovnu proizvodnju.</Text>
                     </TextRight>
                 </Flex>
