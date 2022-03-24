@@ -88,6 +88,7 @@ export const TextLeft = styled.div`
 
 export const TextRight = styled.div`
   font-family: 'GraphikLight';
+  text-align: ${(props => props.fixed ? 'right' : 'left')};
 
   ${respondTo.lg`
       text-align: right;
@@ -114,15 +115,24 @@ export const OrderedListWrapper = styled.ol`
 
 export const OrderedListItem = styled.li`
   counter-increment: slides-counter;
-  &:before {            
-          ${respondTo.md`
-              content: counter(slides-counter, decimal-leading-zero) ".";
-              font-size: 100px;
-              padding: 0 12px;
-              opacity: 0.2;
-              margin-right: '30px'
-          `}
-      }
+  
+  &:before {   
+    content: counter(slides-counter, decimal-leading-zero) ".";
+    font-size: 24px;
+    padding: 0 12px;
+    opacity: 0.2;
+    margin-right: '30px'
+
+      ${respondTo.md`
+            font-size: 60px;
+      `}
+
+      ${respondTo.xxl`
+          font-size: 100px;
+          margin-right: '30px'
+      `}
+  }
+
   ${fontSize};
   ${fontFamily};
   ${maxWidth}

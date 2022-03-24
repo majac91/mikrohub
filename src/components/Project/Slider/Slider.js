@@ -50,6 +50,7 @@ const Slider = ({ slides, aspect }) => {
                     })}
                 </ImgSlider>
                 <TextSlider
+
                     keyboard='true'
                     pagination={{
                         clickable: true,
@@ -65,7 +66,7 @@ const Slider = ({ slides, aspect }) => {
                             </SwiperSlide>
                         )
                     })}
-                    <CustomPagination fontFamily='GraphikLight' fontSize={{ xs: '24px', md: '55px' }} color='text' className='pagination'></CustomPagination>
+                    <CustomPagination fontFamily='GraphikLight' fontSize={{ xxs: '24px', md: '34px', xxl: '55px' }} color='text' className='pagination'></CustomPagination>
                 </TextSlider>
             </SliderWrapper>
         </Box>

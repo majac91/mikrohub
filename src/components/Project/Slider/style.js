@@ -14,7 +14,6 @@ export const SliderWrapper = styled.div`
 `
 
 export const ImgSlider = styled(Swiper)`
-margin-right: -38px;
     ${respondTo.md`
         flex: 0 0 50%;
     `}
@@ -99,7 +98,6 @@ export const CustomPagination = styled.div`
         &:before {            
             ${respondTo.md`
                 content: counters(slides-counter, " ", decimal-leading-zero);
-                font-size: 55px;
                 padding: 0 12px;
             `}
         }

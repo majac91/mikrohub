@@ -31,9 +31,13 @@ export const ProjectTitle = styled(H1)`
     width: 100%;
     max-width: 52%;
     text-transform: uppercase;
-    font-size: 70px;
+    font-size: 60px;
     padding-left: 30px;
     padding-bottom: 32px;
+
+    ${respondTo.xs`
+        font-size: 70px;
+    `}
 
     ${respondTo.md`
         position: absolute;
@@ -59,6 +63,11 @@ export const ProjectTitle = styled(H1)`
         white-space: nowrap;
         font-size: 130px;
         line-height: 0.5;
+    `}
+
+${respondTo.ultraWide`
+        right: 110px;
+        left: 110px;
     `}
     
     span {

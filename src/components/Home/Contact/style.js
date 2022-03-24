@@ -84,7 +84,15 @@ export const RegularLink = styled(LinkVariants)`
     font-size: 32px;
     white-space: nowrap;
 
-    ${respondTo.lg`
+    ${respondTo.md`
+        font-size: 60px;
+    `}
+
+    ${respondTo.xxl`
+        font-size: 70px;
+    `}
+
+    ${respondTo.ultraWide`
         font-size: 100px;
     `}
 

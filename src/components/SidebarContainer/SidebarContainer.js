@@ -8,7 +8,7 @@ const SidebarContainer = ({ children, title }) => {
         <SidebrWrapper>
             <Sidebar>
                 <h1>
-                    <Flex mt='150px' flexDirection='column'>
+                    <Flex mt={{ xxs: '48px', xl: '150px' }} flexDirection='column'>
                         {title.map((word, index) => {
                             return <span key={index}>{word}</span>
                         })}

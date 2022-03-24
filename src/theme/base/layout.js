@@ -10,12 +10,11 @@ export const Box = styled.section`
         max-width: calc(100vw - 110px);
     `}
     ${respondTo.xl`
-            max-width: calc(100vw - 180px);
+            max-width: calc(100vw - 220px);
     `}
     ${respondTo.xxl`
             max-width: calc(100vw - 540px);
     `}
-
     ${space}
     ${layout}
     ${color}
