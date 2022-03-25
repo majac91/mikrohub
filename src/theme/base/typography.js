@@ -64,7 +64,18 @@ export const Text = styled.p`
   ${textAlign};
 `;
 
-export const LinkText = styled.a`
+export const InlineLink = styled.a`
+  text-decoration: underline;
+  display: inline-block;
+
+  ${space};
+  ${fontSize};
+  ${fontFamily};
+  ${textAlign};
+  ${layout}
+`;
+
+export const TextLink = styled(Link)`
   text-decoration: underline;
   display: inline-block;
 
@@ -106,6 +117,10 @@ export const TextRight = styled.div`
 export const OrderedListWrapper = styled.ol`
   counter-reset: slides-counter;
 
+  li: {
+    margin-bottom: 0!important;
+  }
+
   ${fontSize};
   ${fontFamily};
   ${maxWidth}
@@ -119,12 +134,19 @@ export const OrderedListItem = styled.li`
   &:before {   
     content: counter(slides-counter, decimal-leading-zero) ".";
     font-size: 24px;
-    padding: 0 12px;
+    min-width: 40px;
+    margin-right: 15px;
     opacity: 0.2;
     margin-right: '30px'
 
       ${respondTo.md`
             font-size: 60px;
+            padding: 0 12px;
+      `}
+
+      ${respondTo.lg`
+            font-size: 60px;
+            padding: 0 12px;
       `}
 
       ${respondTo.xxl`

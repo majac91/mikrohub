@@ -30,7 +30,7 @@ export const ProjectLink = styled(Link)`
     max-width: 146px;
     font-size: 32px;
     text-transform: capitalize;
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.text}!important;
 
     ${respondTo.lg`
         max-width: 321px;

@@ -22,6 +22,10 @@ export const Box = styled.section`
     ${position}
 `;
 
+export const PageWrapper = styled(Box)`
+    min-height: 70vh;
+`;
+
 export const DarkBox = styled.div`
     background-color: ${(props) => props.theme.colors.text};
     color: white;

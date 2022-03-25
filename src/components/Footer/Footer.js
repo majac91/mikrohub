@@ -7,9 +7,9 @@ import { fontSize } from 'styled-system';
 
 const Footer = () => {
     return (
-        <Box textAlign='center'>
-            <Text fontFamily='GraphikLight' fontSize={[0, 2]}>© mikro.hhub</Text>
-            <Text fontFamily='GraphikLight' fontSize={[0, 2]}> made with love
+        <Box textAlign='center' pb='60px'>
+            <Text fontFamily='GraphikLight' fontSize={{ xxs: '12px', md: '18px' }}>© mikro.hhub</Text>
+            <Text fontFamily='GraphikLight' fontSize={{ xxs: '12px', md: '18px' }}> made with love
             {/* <label>
                     <input type="checkbox" />
                     <svg viewBox="0 0 532 532">

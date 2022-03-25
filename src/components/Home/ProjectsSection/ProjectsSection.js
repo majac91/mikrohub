@@ -1,8 +1,7 @@
 import React, { useRef, useEffect, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
 
 import { Box, Flex, DarkBox, Wrapper } from '../../../theme/base/layout';
-import { H2, Text, LinkText } from '../../../theme/base/typography';
+import { H2, Text, TextLink, InlineLink } from '../../../theme/base/typography';
 import { ImgWrapper } from '../../../theme/base/media';
 import DarkForestCard from "../ProjectCards/DarkForestCard"
 import UrbanHouseCard from '../ProjectCards/UrbanHouseCard';
@@ -11,6 +10,7 @@ import darkForestImg from "../../../img/homepage/landingpage_skroll_01_01.jpg"
 import urbanHouseImg from "../../../img/homepage/landingpage_skroll_-1.jpg"
 
 import { slideUp } from '../../../utils/animation/animate';
+import { isMobile } from 'react-device-detect';
 
 const ProjectsSection = () => {
     const project1WrapperRef = useRef();
@@ -25,13 +25,15 @@ const ProjectsSection = () => {
     let section2Link = useRef(null)
 
     useLayoutEffect(() => {
-        slideUp(section1Title);
-        slideUp(section1Text);
-        slideUp(section1Link);
+        if (!isMobile) {
+            slideUp(section1Title);
+            slideUp(section1Text);
+            slideUp(section1Link);
 
-        slideUp(section2Title, null, '20%');
-        slideUp(section2Text, null, '20%');
-        slideUp(section2Link, null, '20%');
+            slideUp(section2Title, null, '20%');
+            slideUp(section2Text, null, '20%');
+            slideUp(section2Link, null, '20%');
+        }
     }, []);
 
 
@@ -45,8 +47,8 @@ const ProjectsSection = () => {
                             <ImgWrapper display={{ xl: 'none' }} maxWidth='437px' aspect='119%'>
                                 <img src={darkForestImg} alt="" />
                             </ImgWrapper>
-                            <Text ref={(el) => (section1Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} textAlign={{ xs: 'center', md: 'left' }} mt='xl' mb={{ xxs: 's', md: 'xl' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <LinkText href='' target='_blank'>drugu nagradu</LinkText> na međunarodnom konkursu Mini home 2021. godine.</Text>
-                            <LinkText ref={(el) => (section1Link = el)} to='dark-forest-house' fontFamily='GraphikLight' fontSize={{ xxs: '24px', xl: 'h4' }} textAlign={{ xs: 'center', md: 'left' }} display='block'>Više o projektu</LinkText>
+                            <Text ref={(el) => (section1Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} textAlign={{ xs: 'center', md: 'left' }} mt='xl' mb={{ xxs: 's', md: 'xl' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <InlineLink href='' target='_blank'>drugu nagradu</InlineLink> na međunarodnom konkursu Mini home 2021. godine.</Text>
+                            <TextLink ref={(el) => (section1Link = el)} to='dark-forest-house' fontFamily='GraphikLight' fontSize={{ xxs: '24px', xl: 'h4' }} textAlign={{ xs: 'center', md: 'left' }} display='block'>Više o projektu</TextLink>
                         </Wrapper>
                         <DarkForestCard scrollWrapperRef={project1WrapperRef} />
                     </Flex>
@@ -61,8 +63,8 @@ const ProjectsSection = () => {
                             <ImgWrapper display={{ xl: 'none' }} maxWidth='437px' aspect='119%'>
                                 <img src={urbanHouseImg} alt="" />
                             </ImgWrapper>
-                            <Text ref={(el) => (section2Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} mt='xl' mb={{ xxs: 's', md: 'xl' }} textAlign={{ xs: 'center', md: 'right' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <LinkText href='' target='_blank'>drugu nagradu</LinkText> na međunarodnom konkursu Mini home 2021. godine.</Text>
-                            <LinkText ref={(el) => (section2Link = el)} to="urban-house" fontFamily='GraphikLight' fontSize={{ xxs: '24px', xl: 'h4' }} textAlign={{ xs: 'center', md: 'right' }} display='block'>Više o projektu</LinkText>
+                            <Text ref={(el) => (section2Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} mt='xl' mb={{ xxs: 's', md: 'xl' }} textAlign={{ xs: 'center', md: 'right' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <InlineLink href='' target='_blank'>drugu nagradu</InlineLink> na međunarodnom konkursu Mini home 2021. godine.</Text>
+                            <TextLink ref={(el) => (section2Link = el)} to="urban-house" fontFamily='GraphikLight' fontSize={{ xxs: '24px', xl: 'h4' }} textAlign={{ xs: 'center', md: 'right' }} display='block'>Više o projektu</TextLink>
                         </Wrapper>
                     </Flex>
                 </Box>

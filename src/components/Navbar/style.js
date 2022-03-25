@@ -38,6 +38,8 @@ export const NavMenu = styled.ul`
     transform: translateX(-100%);
     background: white;
     z-index: 101;
+    color: ${(props) => props.theme.colors.text};
+
 
     ${respondTo.md`
         display: flex;
@@ -49,8 +51,8 @@ export const NavMenu = styled.ul`
         min-height: unset;
         padding: unset;
         transform: unset!important;
-import { layout } from 'styled-system';
-
+        color: inherit;
+        
     `}
 
     ${(props) => {

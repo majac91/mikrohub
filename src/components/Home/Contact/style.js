@@ -102,6 +102,29 @@ export const RegularLink = styled(LinkVariants)`
     ${textAlign}
 `
 
+export const ProjectsLink = styled.div`
+    margin-bottom: 15px;
+    font-size: 32px;
+    white-space: nowrap;
+
+    ${respondTo.md`
+        font-size: 60px;
+    `}
+
+    ${respondTo.xxl`
+        font-size: 70px;
+    `}
+
+    ${respondTo.ultraWide`
+        font-size: 100px;
+    `}
+
+    ${space}
+    ${space}
+    ${fontSize}
+    ${textAlign}
+`
+
 export const AnimatedLink = styled(RegularLink)`
         /* &:after {
             position: absolute;

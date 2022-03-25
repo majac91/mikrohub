@@ -20,11 +20,12 @@ export const slideUp = (elem, delay, startPercent) => {
 };
 
 //Animate image zoom out - image has 'scale' prop as a starting point
-export const zoomOut = (elem) => {
+export const zoomOut = (elem, triggerPosition) => {
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: elem,
-            start: "bottom bottom",
+            start: `${triggerPosition ? triggerPosition : 'bottom bottom'}`,
+
         }
     })
 

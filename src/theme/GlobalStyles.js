@@ -109,6 +109,9 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  #root {
+    min-height: 100vh;
+  }
 
 // RESPONSIVE
 html {

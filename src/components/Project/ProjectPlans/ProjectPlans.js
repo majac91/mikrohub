@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { ImgWrapper } from '../../../theme/base/media';
 import { Box, Flex } from '../../../theme/base/layout';
 import { PlanCard } from './style';
 import { H3, TextRight, TextLeft } from '../../../theme/base/typography';
 
+import { isMobile } from 'react-device-detect';
+import { slideUp } from '../../../utils/animation/animate';
+
 const ProjectPlans = ({ plans }) => {
+    let sectionRef = useRef(null)
+
+    useLayoutEffect(() => {
+        if (!isMobile) {
+            slideUp(sectionRef);
+        }
+    }, []);
 
     return (
         <Box>
-            <Flex pt={{ xs: '39px', md: '95px' }} mb={{ xxs: '47px', md: '50px' }} flexDirection={{ xxs: 'column', md: 'row' }} justifyContent='space-between' alignItems='flex-start'>
+            <Flex ref={(el) => (sectionRef = el)} pt={{ xs: '39px', md: '95px' }} mb={{ xxs: '47px', md: '50px' }} flexDirection={{ xxs: 'column', md: 'row' }} justifyContent='space-between' alignItems='flex-start'>
                 <PlanCard mb={{ xxs: '30px', md: 0 }}>
                     <H3 whiteSpace='nowrap' fontSize={{ xxs: '24px', md: '40px', xl: '50px', ultraWide: '70px' }} mb={{ xxs: '30px', md: '40px' }}>{plans.plan1.title}</H3>
                     <ImgWrapper aspect='94%' mb={{ xxs: '30px', md: '80px' }}>

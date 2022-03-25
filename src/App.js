@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./theme/GlobalStyles";
 import theme from "./theme/base/theme";
@@ -17,16 +18,22 @@ import UrbanHousePage from './pages/UrbanHousePage';
 
 
 function App() {
+  const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
+
+  const toggleProjectsMenu = () => {
+    setIsProjectsMenuOpen(prev => !prev);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Navbar />
+      <Navbar isProjectsMenuOpen={isProjectsMenuOpen} setIsProjectsMenuOpen={setIsProjectsMenuOpen} toggleProjectsMenu={toggleProjectsMenu} />
 
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage isProjectsMenuOpen={isProjectsMenuOpen} toggleProjectsMenu={toggleProjectsMenu} />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="process" element={<ProcessPage />} />
-        <Route path="contact" element={<ContactPage />} />
+        <Route exact path="contact" element={<ContactPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="dark-forest-house" element={<DarkForestPage />} />
         <Route path="rural-house" element={<RuralHousePage />} />

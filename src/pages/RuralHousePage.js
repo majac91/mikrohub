@@ -1,6 +1,9 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import DOMPurify from "dompurify";
+
+import { isMobile } from 'react-device-detect';
+import { zoomOut } from '../utils/animation/animate';
 
 import ProjectCover from '../components/Project/ProjectCover/ProjectCover';
 import ProjectAbout from '../components/Project/ProjectAbout/ProjectAbout';
@@ -28,6 +31,16 @@ import slide3 from '../img/rural-house/slide3.jpeg';
 const RuralHousePage = () => {
     const contactRef = useRef();
     const isOnScreen = useOnIntersection(contactRef);
+
+    let imgSection1Ref = useRef(null)
+    let imgSection2Ref = useRef(null)
+
+    useLayoutEffect(() => {
+        if (!isMobile) {
+            zoomOut(imgSection1Ref, 'top center');
+            zoomOut(imgSection2Ref, 'top center');
+        }
+    }, []);
 
     const plans = {
         plan1: {
@@ -64,19 +77,19 @@ const RuralHousePage = () => {
                 <p>Dizajn ove kuće predstavlja specifičan projekat čiji je cilj bio osmišljavanje male kuće, površine 25m2, koja bi bila u potpunosti prefabrikovana i ucelo transportovana na željenu lokaciju, a koja bi korisniku pružila maksimalno komforne uslove za duži boravak. Posebno se vodilo računa o dimenzijama objekta koje su, u skladu sa evropskim građevinskim propisima, ostale u granicama objekta za koji nisu potrebne posebne dozvole za izgradnju i prateća dokumentacija. Tako je korisnicima pružena prilika da naruče kuću za odmor koja bi u kratkom vremenskom periodu bila isporučena kompletno završena. Ruralna kuća je dizajnirana za češku firmu Nový Domov Steco, a izvođenje prvih jedinica se očekuje 2022. godine.</p>
             </ProjectAbout>
             <ProjectPlans plans={plans}></ProjectPlans>
-            <ImgWrapper aspect='50%'>
+            <ImgWrapper aspect='50%' scale='1.05' ref={(el) => (imgSection1Ref = el)}>
                 <img src={imgSection1} />
             </ImgWrapper>
             <Box display={{ md: 'none' }}>
                 <TextRight mt='50px' >{plans.plan2.content}</TextRight>
             </Box>
             <Slider slides={slides} aspect='73%' />
-            <ImgWrapper aspect='50%'>
+            <ImgWrapper aspect='50%' scale='1.05' ref={(el) => (imgSection2Ref = el)}>
                 <img src={imgSection2} />
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="contact">Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/contact">Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>

@@ -17,8 +17,6 @@ import img9 from "../../../img/homepage/landingpage_skroll_-8.jpg"
 const HomeCover = () => {
     const hoverSliderRef = useRef();
 
-
-
     useEffect(() => {
         setTimeout(() => {
             hoverSliderRef.current.classList.remove('animating');

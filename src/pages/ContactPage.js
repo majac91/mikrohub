@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import SidebarContainer from '../components/SidebarContainer/SidebarContainer';
-import { Box, Flex } from '../theme/base/layout';
+import { PageWrapper, Box, Flex } from '../theme/base/layout';
 import { TextRight, Text, H1 } from '../theme/base/typography';
 import { RegularLink, ContactLink } from "../components/Home/Contact/style";
 
@@ -14,7 +14,7 @@ const ContactPage = () => {
     }, []);
 
     return (
-        <Box>
+        <PageWrapper>
             <H1 mt={{ xxs: '110px', md: '218px' }} fontSize={{ xxs: '70px', xl: '160px!important', ultraWide: '200px!important' }}>KONTAKT</H1>
             <TextRight mt={{ xxs: '32px', md: '116px' }} maxWidth={{ md: '600px' }} ml={{ md: 'auto' }}>
                 <Text fontSize={{ xxs: '16px', md: '24px' }} display='flex' flexDirection='column'>Zainteresovani ste za saradnju, neki od naših objekata ili imate ideju koju mislite da možemo da realizujemo? Pišite nam!</Text>
@@ -23,7 +23,7 @@ const ContactPage = () => {
                 <span>zdravo@</span>
                 <span>mikrohhub.com</span>
             </ContactLink>
-        </Box >
+        </PageWrapper >
     );
 }
 

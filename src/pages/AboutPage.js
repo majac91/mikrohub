@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import SidebarContainer from '../components/SidebarContainer/SidebarContainer';
 import { Box, Flex } from '../theme/base/layout';
 import { TextRight, Text } from '../theme/base/typography';
 import { RegularLink, ContactLink } from "../components/Home/Contact/style";
 
 const AboutPage = () => {
+
     return (
         <Box>
             <SidebarContainer title={['mikro.', 'hhub']} >
@@ -25,7 +26,7 @@ const AboutPage = () => {
                 <Text fontSize={{ xxs: '16px', md: '50px', xl: '70px' }} display='flex' flexDirection='column'>saznate više? </Text>
                 <Text fontSize={{ xxs: '16px', md: '50px', xl: '70px' }} display='flex' flexDirection='column'>Pišite nam na </Text>
             </TextRight>
-            <ContactLink mt={{ xxs: '32px', md: '81px' }} mb={{ md: '150px' }} href='mailto:zdravo@mikrohhub.com' display='flex' flexDirection={{ xxs: 'column', md: 'row' }} alignItems={{ xxs: 'flex-start', xxl: 'center' }} justifyContent={{ lg: 'center' }}>
+            <ContactLink mt={{ xxs: '32px', md: '81px' }} mb={{ xxs: '83px', md: '150px' }} href='mailto:zdravo@mikrohhub.com' display='flex' flexDirection={{ xxs: 'column', md: 'row' }} alignItems={{ xxs: 'flex-start', xxl: 'center' }} justifyContent={{ lg: 'center' }}>
                 <span>zdravo@</span>
                 <span>mikrohhub.com</span>
             </ContactLink>

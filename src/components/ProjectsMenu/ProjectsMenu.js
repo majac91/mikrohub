@@ -3,10 +3,16 @@ import { ProjectMenuWrapper, DarkForestLink, AshwoodLink, RuralLink, UrbanLink }
 import { Box, Flex } from '../../theme/base/layout';
 import { Burger, Bars } from '../Navbar/style';
 import { ProjectMenuContext } from '../Navbar/project-menu-context';
+import { useLocation } from 'react-router-dom';
 
 const ProjectsMenu = (toggleNav) => {
     const { isProjectsMenuOpen } = useContext(ProjectMenuContext);
 
+    const close = () => {
+        setTimeout(() => {
+            toggleNav();
+        }, 500);
+    }
     return (
 
         <ProjectMenuWrapper className={isProjectsMenuOpen ? 'open' : 'closed'} >
@@ -14,10 +20,10 @@ const ProjectsMenu = (toggleNav) => {
                 <Bars $mode='open' />
             </Burger>
             <Flex flexDirection='column' py={{ xxs: '80px', lg: '118px' }} ml={{ xxs: '36px', lg: '150px', xxl: '303px' }}>
-                <DarkForestLink onClick={toggleNav} to='dark-forest-house' mb={{ xxs: '18px', lg: '43px' }}>Darkforest kuća</DarkForestLink>
-                <AshwoodLink onClick={toggleNav} to='ashwood-house' mb={{ xxs: '18px', lg: '43px' }}>Ashwood kuća</AshwoodLink>
-                <RuralLink onClick={toggleNav} to='rural-house' mb={{ xxs: '18px', lg: '43px' }}>Ruralna kuća</RuralLink>
-                <UrbanLink onClick={toggleNav} to='urban-house' mb={{ xxs: '18px', lg: '43px' }}>Urbana kuća</UrbanLink>
+                <DarkForestLink onClick={close} to='/dark-forest-house' mb={{ xxs: '18px', lg: '43px' }}>Darkforest kuća</DarkForestLink>
+                <AshwoodLink onClick={close} to='ashwood-house' mb={{ xxs: '18px', lg: '43px' }}>Ashwood kuća</AshwoodLink>
+                <RuralLink onClick={close} to='rural-house' mb={{ xxs: '18px', lg: '43px' }}>Ruralna kuća</RuralLink>
+                <UrbanLink onClick={close} to='urban-house' mb={{ xxs: '18px', lg: '43px' }}>Urbana kuća</UrbanLink>
             </Flex>
         </ProjectMenuWrapper>
     )

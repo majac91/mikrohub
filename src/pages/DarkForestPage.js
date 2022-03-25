@@ -1,6 +1,9 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import DOMPurify from "dompurify";
+
+import { isMobile } from 'react-device-detect';
+import { zoomOut } from '../utils/animation/animate';
 
 import ProjectCover from '../components/Project/ProjectCover/ProjectCover';
 import ProjectAbout from '../components/Project/ProjectAbout/ProjectAbout';
@@ -24,10 +27,20 @@ import slide3 from '../img/dark-forest/df-slider-3.jpeg';
 import slide4 from '../img/dark-forest/df-slider-4.jpeg';
 import slide5 from '../img/dark-forest/df-slider-5.jpeg';
 
-
 const DarkForestPage = () => {
     const contactRef = useRef();
     const isOnScreen = useOnIntersection(contactRef);
+
+    let imgSection1Ref = useRef(null)
+    let imgSection2Ref = useRef(null)
+
+    useLayoutEffect(() => {
+        if (!isMobile) {
+            zoomOut(imgSection1Ref, 'top center');
+            zoomOut(imgSection2Ref, 'top center');
+        }
+    }, []);
+
 
     const plans = {
         plan1: {
@@ -73,19 +86,19 @@ const DarkForestPage = () => {
                 <p> Darkforest kuća je osvojila <a href=''>drugu nagradu na internacionalnom konkursu Mini home 2021. godine.</a></p>
             </ProjectAbout>
             <ProjectPlans plans={plans}></ProjectPlans>
-            <ImgWrapper aspect='50%'>
+            <ImgWrapper scale='1.05' ref={(el) => (imgSection1Ref = el)} aspect='50%'>
                 <img src={imgSection1} />
             </ImgWrapper>
             <Box display={{ md: 'none' }}>
                 <TextRight mt='50px' >{plans.plan2.content}</TextRight>
             </Box>
             <Slider slides={slides} aspect='100%' />
-            <ImgWrapper aspect='50%'>
+            <ImgWrapper scale='1.05' ref={(el) => (imgSection2Ref = el)} aspect='50%'>
                 <img src={imgSection1} />
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>

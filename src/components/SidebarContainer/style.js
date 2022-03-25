@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { respondTo } from '../../theme/utils/respondTo';
-import { Box, Flex } from '../../theme/base/layout';
 
 
 export const SidebrWrapper = styled.div`
@@ -14,9 +13,9 @@ export const SidebrWrapper = styled.div`
 `
 
 export const Sidebar = styled.div`
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
 
     ${respondTo.lg`
         flex: 0 0 40%;
@@ -46,10 +45,10 @@ export const Sidebar = styled.div`
 
 export const SidebarContent = styled.div`
     margin-left: auto;
-    padding-top: 30px;
 
     ${respondTo.md`
-        max-width: 56%;
+        padding-top: 30px;
+        max-width: 58%;
         padding-top: 100px;
     `}
 
@@ -58,7 +57,11 @@ export const SidebarContent = styled.div`
     `}
 
     ${respondTo.xxl`
-        max-width: 50%;
+        max-width: 54%;
         padding-top: 400px;
+    `}
+
+    ${respondTo.ultraWide`
+        max-width: 50%;
     `}
 `

@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-
 import { CSSPlugin } from 'gsap/CSSPlugin'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from 'gsap';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -25,7 +25,9 @@ if (typeof window !== 'undefined') {
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ScrollToTop>
+        <App />
+      </ScrollToTop>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

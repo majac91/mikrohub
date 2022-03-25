@@ -9,30 +9,30 @@ import { Box } from '../../theme/base/layout';
 import ProjectsMenu from '../ProjectsMenu/ProjectsMenu';
 
 
-const Navbar = () => {
+const Navbar = ({ isProjectsMenuOpen, setIsProjectsMenuOpen, toggleProjectsMenu }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
+    // const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
 
     const mikroRef = useRef();
     const hubRef = useRef();
     const navMenuRef = useRef();
 
-    useEffect(() => {
-        gsap.timeline({ defaults: { duration: 1 } })
-            .to([hubRef.current, mikroRef.current],
-                {
-                    width: 0,
-                    autoAlpha: 0.2,
-                    duration: 0.6,
-                    ease: "slow(0.7, 0.7, false)"
-                })
-    }, []);
+    // useEffect(() => {
+    //     gsap.timeline({ defaults: { duration: 1 } })
+    //         .to([hubRef.current, mikroRef.current],
+    //             {
+    //                 width: 0,
+    //                 autoAlpha: 0.2,
+    //                 duration: 0.6,
+    //                 ease: "slow(0.7, 0.7, false)"
+    //             })
+    // }, []);
 
     const toggleNav = () => setIsOpen(prev => !prev);
 
-    const toggleProjectsMenu = () => {
-        setIsProjectsMenuOpen(prev => !prev);
-    };
+    // const toggleProjectsMenu = () => {
+    //     setIsProjectsMenuOpen(prev => !prev);
+    // };
 
     return (
         <ProjectMenuProvider value={{ isProjectsMenuOpen }}>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     </Burger>
                     <NavMenu ref={navMenuRef} $mode={isOpen ? 'open' : 'closed'}>
                         <NavItem onClick={toggleProjectsMenu}>
-                            <NavLink to='/' disabled={true} >Projekti</NavLink>
+                            <NavLink to='#' disabled={true} >Projekti</NavLink>
                             {isProjectsMenuOpen && <ProjectsMenu onClick={toggleNav} />}
                         </NavItem>
                         <NavItem onClick={toggleNav}>

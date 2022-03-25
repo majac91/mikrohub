@@ -1,6 +1,9 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import DOMPurify from "dompurify";
+
+import { isMobile } from 'react-device-detect';
+import { zoomOut } from '../utils/animation/animate';
 
 import ProjectCover from '../components/Project/ProjectCover/ProjectCover';
 import ProjectAbout from '../components/Project/ProjectAbout/ProjectAbout';
@@ -29,6 +32,16 @@ import slide5 from '../img/ashwood-house/as-slider-5.jpeg';
 const AshwoodHousePage = () => {
     const contactRef = useRef();
     const isOnScreen = useOnIntersection(contactRef);
+
+    let imgSection1Ref = useRef(null)
+    let imgSection2Ref = useRef(null)
+
+    useLayoutEffect(() => {
+        if (!isMobile) {
+            zoomOut(imgSection1Ref, 'top center');
+            zoomOut(imgSection2Ref, 'top center');
+        }
+    }, []);
 
     const plans = {
         plan1: {
@@ -73,19 +86,19 @@ const AshwoodHousePage = () => {
                 <p>Inspirisana projektom kreiranog za privatnog klijenta, Ashwood kuća predstavlja luksuznu mikro kuću za odmor namenjenu prirodnom okruženju. Ova kuća jednostavnih volumena tretiranih kontrastnim drvenim oblogama lako može postati deo različitih prirodnih, seoskih ili suburbanih okruženja, a istovremeno se izdvojiti svojom čistom formom. Objekat je dizajniran tako da ga je moguće montirati u fabrici i iz nekoliko delova transporovati na željeno odrediše. Ova kuća može biti povezana sa postojećom infrastruktralnom mrežom, ili kompletno nezavisna, uz dodavanje sistema za proizvodnju energije i snabnevanje vodom, i njihove prateće opreme. Sa površinom od 25m2, Ashwood kuća pruža sve pogodnosti za odmor i rad u prirodi.</p>
             </ProjectAbout>
             <ProjectPlans plans={plans}></ProjectPlans>
-            <ImgWrapper aspect='50%'>
+            <ImgWrapper scale='1.05' ref={(el) => (imgSection1Ref = el)} aspect='50%'>
                 <img src={imgSection1} />
             </ImgWrapper>
             <Box display={{ md: 'none' }}>
                 <TextRight mt='50px' >{plans.plan2.content}</TextRight>
             </Box>
             <Slider slides={slides} aspect='100%' />
-            <ImgWrapper aspect='50%'>
+            <ImgWrapper scale='1.05' ref={(el) => (imgSection2Ref = el)} aspect='50%'>
                 <img src={imgSection2} />
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='light' to="contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='light' to="/contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>
