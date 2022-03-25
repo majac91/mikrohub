@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
+
+import { isMobile } from 'react-device-detect';
+import { zoomOut, slideUp } from '../utils/animation/animate';
+
 import SidebarContainer from '../components/SidebarContainer/SidebarContainer';
 import { Box, Flex, Wrapper } from '../theme/base/layout';
 import { TextRight, Text, OrderedListWrapper, OrderedListItem } from '../theme/base/typography';
@@ -6,6 +10,28 @@ import { ContactLink } from "../components/Home/Contact/style";
 
 
 const ProcessPage = () => {
+    let conjunctionRef = useRef(null)
+    let description1Ref = useRef(null)
+    let description2Ref = useRef(null)
+    let description3Ref = useRef(null)
+    let step1Ref = useRef(null)
+    let step2Ref = useRef(null)
+    let step3Ref = useRef(null)
+
+
+    useLayoutEffect(() => {
+        if (!isMobile) {
+            slideUp(conjunctionRef);
+            slideUp(description1Ref, .5);
+            slideUp(description2Ref, .7);
+            slideUp(description3Ref, .9);
+
+            slideUp(step1Ref);
+            slideUp(step2Ref, .5);
+            slideUp(step3Ref, .7);
+        }
+    }, []);
+
     return (
         <>
             <Box>
@@ -13,33 +39,33 @@ const ProcessPage = () => {
                     <TextRight fixed={true}>
                         <Flex justifyContent='flex-end' flexDirection={{ xxs: 'column', md: 'row' }} alignItems={{ xxs: 'flex-end', md: 'flex-start' }}>
                             <Wrapper mr={{ md: '58px' }}>
-                                <Text fontSize={{ xxs: '24px', md: '70px' }}>je</Text>
+                                <Text fontSize={{ xxs: '24px', md: '70px' }} ref={(el) => { conjunctionRef = el }}>je</Text>
                             </Wrapper>
                             <Wrapper>
-                                <Text fontSize={{ xxs: '24px', md: '70px' }}>interaktivan</Text>
-                                <Text fontSize={{ xxs: '24px', md: '70px' }}>dinamičan</Text>
-                                <Text fontSize={{ xxs: '24px', md: '70px' }}>intuitivan</Text>
+                                <Text fontSize={{ xxs: '24px', md: '70px' }} ref={(el) => { description1Ref = el }} >interaktivan</Text>
+                                <Text fontSize={{ xxs: '24px', md: '70px' }} ref={(el) => { description2Ref = el }} >dinamičan</Text>
+                                <Text fontSize={{ xxs: '24px', md: '70px' }} ref={(el) => { description3Ref = el }} >intuitivan</Text>
                             </Wrapper>
                         </Flex>
                     </TextRight>
                     <TextRight fixed={true}>
                         <Text fontSize='16px' display={{ md: 'none' }} mt='22px'>Čine ga:</Text>
                     </TextRight>
-                    <TextRight pt={{ xxs: '77px', md: '80px' }}>
-                        <OrderedListWrapper>
+                    <TextRight pt={{ xxs: '77px', md: '100px', xl: '250px', ultraWide: '300px' }}>
+                        <OrderedListWrapper ref={(el) => { step1Ref = el }}>
                             <OrderedListItem display='flex' mb={{ md: '60px' }}>
                                 <Wrapper>
                                     <Text display='inline' fontSize={{ xxs: '24px', md: '40px', lg: '60px', xl: '70px', ultraWide: '100px' }}>Istaživanje</Text>
                                     <Text fontSize={{ xxs: '16px', md: '24px' }} maxWidth={{ xxl: '519px' }} ml='auto'>Upoznavanje sa posebnostima projekta i promišljanje spektra mogućih dizajnerskih pristupa.</Text>
                                 </Wrapper>
                             </OrderedListItem>
-                            <OrderedListItem display='flex' mb={{ md: '60px' }}>
+                            <OrderedListItem ref={(el) => { step2Ref = el }} display='flex' mb={{ md: '60px' }}>
                                 <Wrapper>
                                     <Text display='inline' fontSize={{ xxs: '24px', md: '40px', lg: '60px', xl: '70px', ultraWide: '100px' }}>Koncept</Text>
                                     <Text fontSize={{ xxs: '16px', md: '24px' }} maxWidth={{ xxl: '519px' }} ml='auto'>Testiramo različite pristupe i ideje kako bismo došli do optimalnog rešenja.</Text>
                                 </Wrapper>
                             </OrderedListItem>
-                            <OrderedListItem display='flex' mb={{ md: '60px' }}>
+                            <OrderedListItem ref={(el) => { step3Ref = el }} display='flex' mb={{ md: '60px' }}>
                                 <Wrapper>
                                     <Text display='inline' fontSize={{ xxs: '24px', md: '40px', lg: '60px', xl: '70px', ultraWide: '100px' }}>Dizajn</Text>
                                     <Text fontSize={{ xxs: '16px', md: '24px' }} maxWidth={{ xxl: '519px' }} ml='auto'>Razvijanje odabranog koncepta, razrada detalja i vizaulizacija projekta.</Text>

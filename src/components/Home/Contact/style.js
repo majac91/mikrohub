@@ -106,6 +106,7 @@ export const ProjectsLink = styled.div`
     margin-bottom: 15px;
     font-size: 32px;
     white-space: nowrap;
+    cursor: pointer;
 
     ${respondTo.md`
         font-size: 60px;

@@ -1,10 +1,29 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import SidebarContainer from '../components/SidebarContainer/SidebarContainer';
 import { Box, Flex } from '../theme/base/layout';
 import { TextRight, Text } from '../theme/base/typography';
-import { RegularLink, ContactLink } from "../components/Home/Contact/style";
+import { ProjectsLink, RegularLink, ContactLink } from "../components/Home/Contact/style";
+
+
+import { isMobile } from 'react-device-detect';
+import { zoomOut, slideUp } from '../utils/animation/animate';
 
 const AboutPage = () => {
+
+    let step1Ref = useRef(null)
+    let step2Ref = useRef(null)
+    let step3Ref = useRef(null)
+    let ctaRef = useRef(null)
+
+
+    useLayoutEffect(() => {
+        if (!isMobile) {
+            slideUp(step1Ref);
+            slideUp(step2Ref, .5);
+            slideUp(step3Ref, .7);
+            slideUp(ctaRef, .5);
+        }
+    }, []);
 
     return (
         <Box>
@@ -16,12 +35,12 @@ const AboutPage = () => {
                     <Text pb={{ xxs: '16px', lg: '34px' }} fontSize={{ xxs: '16px', md: '24px' }}>mikro.hhub čine arhitektice Ana Curk I Sanja Cvetković.</Text>
                 </TextRight>
                 <Flex flexDirection='column' mt={{ xxs: '', md: '125px;' }} display={{ xxs: 'none', lg: 'flex' }}>
-                    <RegularLink to="projects" variant='light' textAlign={['left', 'left', 'right']}>Naši projekti</RegularLink>
-                    <RegularLink to="process" variant='lightItalic' textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>
-                    <RegularLink variant='boldNoUnderline' to="process" textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>
+                    <ProjectsLink aria-label='projects menu' ref={(el) => { step1Ref = el }} variant='light' textAlign={['left', 'left', 'right']}>Naši projekti</ProjectsLink>
+                    <RegularLink ref={(el) => { step2Ref = el }} to="/process" variant='lightItalic' textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>
+                    <RegularLink ref={(el) => { step3Ref = el }} variant='boldNoUnderline' to="/contact" textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>
                 </Flex>
             </SidebarContainer>
-            <TextRight mt={{ md: '100px', lg: '240px' }}>
+            <TextRight ref={(el) => { ctaRef = el }} mt={{ md: '100px', lg: '240px' }}>
                 <Text fontSize={{ xxs: '16px', md: '50px', xl: '70px' }} display='flex' flexDirection='column'>Želite da </Text>
                 <Text fontSize={{ xxs: '16px', md: '50px', xl: '70px' }} display='flex' flexDirection='column'>saznate više? </Text>
                 <Text fontSize={{ xxs: '16px', md: '50px', xl: '70px' }} display='flex' flexDirection='column'>Pišite nam na </Text>

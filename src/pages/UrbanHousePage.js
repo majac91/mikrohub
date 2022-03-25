@@ -1,4 +1,3 @@
-
 import React, { useRef, useLayoutEffect } from 'react';
 import DOMPurify from "dompurify";
 
