@@ -36,8 +36,8 @@ const AboutPage = () => {
                 </TextRight>
                 <Flex flexDirection='column' mt={{ xxs: '', md: '125px;' }} display={{ xxs: 'none', lg: 'flex' }}>
                     <ProjectsLink aria-label='projects menu' ref={(el) => { step1Ref = el }} variant='light' textAlign={['left', 'left', 'right']}>Naši projekti</ProjectsLink>
-                    <RegularLink ref={(el) => { step2Ref = el }} to="/process" variant='lightItalic' textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>
-                    <RegularLink ref={(el) => { step3Ref = el }} variant='boldNoUnderline' to="/contact" textAlign={['left', 'left', 'right']}>Naš procesi</RegularLink>
+                    <RegularLink ref={(el) => { step2Ref = el }} to="/proces" variant='lightItalic' textAlign={['left', 'left', 'right']}>Naš proces</RegularLink>
+                    <RegularLink ref={(el) => { step3Ref = el }} variant='boldNoUnderline' to="/kontakt" textAlign={['left', 'left', 'right']}>Kontakt</RegularLink>
                 </Flex>
             </SidebarContainer>
             <TextRight ref={(el) => { ctaRef = el }} mt={{ md: '100px', lg: '240px' }}>

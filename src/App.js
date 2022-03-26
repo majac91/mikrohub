@@ -8,7 +8,6 @@ import Navbar from './components/Navbar/Navbar'
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import ProjectsPage from './pages/ProjectsPage';
 import ProcessPage from './pages/ProcessPage';
 import Footer from './components/Footer/Footer';
 import DarkForestPage from './pages/DarkForestPage';
@@ -31,10 +30,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage isProjectsMenuOpen={isProjectsMenuOpen} toggleProjectsMenu={toggleProjectsMenu} />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="process" element={<ProcessPage />} />
-        <Route exact path="contact" element={<ContactPage />} />
-        <Route path="about" element={<AboutPage />} />
+        <Route path="proces" element={<ProcessPage />} />
+        <Route exact path="kontakt" element={<ContactPage />} />
+        <Route path="o-nama" element={<AboutPage />} />
         <Route path="dark-forest-house" element={<DarkForestPage />} />
         <Route path="rural-house" element={<RuralHousePage />} />
         <Route path="ashwood-house" element={<AshwoodHousePage />} />

@@ -27,7 +27,9 @@ const ProjectPlans = ({ plans }) => {
                     <TextLeft display={{ xxs: 'none', md: 'block' }}>{plans.plan1.content}</TextLeft>
                 </PlanCard>
                 <PlanCard>
-                    <H3 fontSize={{ xxs: '24px', md: '70px' }} fontSize={{ xs: '24px', md: '40px', xl: '50px', ultraWide: '70px' }} mb={{ xxs: '30px', md: '40px' }}>{plans.plan2.title}</H3>
+                    <TextRight fontFamily='GraphikRegular'>
+                        <H3 fontSize={{ xxs: '24px', md: '70px' }} fontSize={{ xs: '24px', md: '40px', xl: '50px', ultraWide: '70px' }} mb={{ xxs: '30px', md: '40px' }}>{plans.plan2.title}</H3>
+                    </TextRight>
                     <ImgWrapper aspect='94%' mb={{ xxs: '30px', md: '80px' }}>
                         <img src={plans.plan2.img} alt='first floor plan' />
                     </ImgWrapper>

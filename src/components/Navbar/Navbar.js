@@ -55,13 +55,13 @@ const Navbar = ({ isProjectsMenuOpen, setIsProjectsMenuOpen, toggleProjectsMenu 
                             {isProjectsMenuOpen && <ProjectsMenu onClick={toggleNav} />}
                         </NavItem>
                         <NavItem onClick={toggleNav}>
-                            <NavLink to="process">Proces</NavLink>
+                            <NavLink to="proces">Proces</NavLink>
                         </NavItem>
                         <NavItem onClick={toggleNav}>
-                            <NavLink to="contact">Kontakt</NavLink>
+                            <NavLink to="kontakt">Kontakt</NavLink>
                         </NavItem>
                         <NavItem onClick={toggleNav}>
-                            <NavLink to="about">About</NavLink>
+                            <NavLink to="o-nama">O nama</NavLink>
                         </NavItem>
                     </NavMenu>
                 </Nav>

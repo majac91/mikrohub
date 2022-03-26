@@ -30,9 +30,9 @@ const Contact = ({ isProjectsMenuOpen, toggleProjectsMenu }) => {
     return (
         <Flex ref={sectionRef} position='relative' flexDirection='column' alignItems='center' mt={{ xxs: '110px', xl: '217px' }} mb={{ xxs: '79px', lg: '305px' }} textAlign='center' position='relative'>
             <ProjectsLink aria-label='projects menu' onClick={toggleProjectsMenu} ref={(el) => (link1Ref = el)}>Naši projekti</ProjectsLink>
-            <RegularLink to='process' variant='italic' to="process" ref={(el) => (link2Ref = el)}>Naš procesi</RegularLink>
-            <RegularLink to="about" variant='light' to="about" ref={(el) => (link3Ref = el)}>Ko smo mi</RegularLink>
-            <AnimatedLink to="contact" position='absolute' bottom={{ xxs: '-45px', lg: '-110px' }} className={isOnScreen && 'anim-start'} ref={(el) => (link4Ref = el)} variant='bold' to="contact">Kontakt</AnimatedLink>
+            <RegularLink to='proces' variant='italic' ref={(el) => (link2Ref = el)}>Naš procesi</RegularLink>
+            <RegularLink to="o-nama" variant='light' to="about" ref={(el) => (link3Ref = el)}>Ko smo mi</RegularLink>
+            <AnimatedLink to="kontakt" position='absolute' bottom={{ xxs: '-45px', lg: '-110px' }} className={isOnScreen && 'anim-start'} ref={(el) => (link4Ref = el)} variant='bold' to="contact">Kontakt</AnimatedLink>
         </Flex >
     );
 }

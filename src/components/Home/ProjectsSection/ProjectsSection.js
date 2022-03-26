@@ -47,7 +47,7 @@ const ProjectsSection = () => {
                             <ImgWrapper display={{ xl: 'none' }} maxWidth='437px' aspect='119%'>
                                 <img src={darkForestImg} alt="" />
                             </ImgWrapper>
-                            <Text ref={(el) => (section1Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} textAlign={{ xs: 'center', md: 'left' }} mt='xl' mb={{ xxs: 's', md: 'xl' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <InlineLink href='' target='_blank'>drugu nagradu</InlineLink> na međunarodnom konkursu Mini home 2021. godine.</Text>
+                            <Text ref={(el) => (section1Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} textAlign={{ xs: 'center', md: 'left' }} mt='xl' mb={{ xxs: 's', md: 'xl' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <InlineLink href='https://www.gradnja.rs/darkforest-sanja-cvetkovic-ana-curk-konkurs-minihome/' target='_blank'>drugu nagradu</InlineLink> na međunarodnom konkursu Mini home 2021. godine.</Text>
                             <TextLink ref={(el) => (section1Link = el)} to='dark-forest-house' fontFamily='GraphikLight' fontSize={{ xxs: '24px', xl: 'h4' }} textAlign={{ xs: 'center', md: 'left' }} display='block'>Više o projektu</TextLink>
                         </Wrapper>
                         <DarkForestCard scrollWrapperRef={project1WrapperRef} />
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
                             <ImgWrapper display={{ xl: 'none' }} maxWidth='437px' aspect='119%'>
                                 <img src={urbanHouseImg} alt="" />
                             </ImgWrapper>
-                            <Text ref={(el) => (section2Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} mt='xl' mb={{ xxs: 's', md: 'xl' }} textAlign={{ xs: 'center', md: 'right' }}>Projektovana za obronke Stare planine Darkforest kuća je osvojila <InlineLink href='' target='_blank'>drugu nagradu</InlineLink> na međunarodnom konkursu Mini home 2021. godine.</Text>
+                            <Text ref={(el) => (section2Text = el)} fontFamily='GraphikLight' fontSize={{ xxs: 'p', xl: '24px' }} mt='xl' mb={{ xxs: 's', md: 'xl' }} textAlign={{ xs: 'center', md: 'right' }}>Urbana kuća je mikro kuća površine 25 m2 i predstavlja održivo dizajnersko rešenje koje je moguće postaviti bilo gde u svetu.</Text>
                             <TextLink ref={(el) => (section2Link = el)} to="urban-house" fontFamily='GraphikLight' fontSize={{ xxs: '24px', xl: 'h4' }} textAlign={{ xs: 'center', md: 'right' }} display='block'>Više o projektu</TextLink>
                         </Wrapper>
                     </Flex>

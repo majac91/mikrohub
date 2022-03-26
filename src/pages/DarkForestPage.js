@@ -58,7 +58,7 @@ const DarkForestPage = () => {
     const slides = [
         {
             img: slide1,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href='https://www.gradnja.rs/5-najcitanijih-projekata-srbija-region-2021-godina/'>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href='https://www.gradnja.rs/darkforest-sanja-cvetkovic-ana-curk-konkurs-minihome/'>Mini home</a> sa preko 18850 pregleda.")
         },
         {
             img: slide2,
