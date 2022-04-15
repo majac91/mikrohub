@@ -32,7 +32,7 @@ const Contact = ({ isProjectsMenuOpen, toggleProjectsMenu }) => {
             <ProjectsLink aria-label='projects menu' onClick={toggleProjectsMenu} ref={(el) => (link1Ref = el)}>Naši projekti</ProjectsLink>
             <RegularLink to='proces' variant='italic' ref={(el) => (link2Ref = el)}>Naš procesi</RegularLink>
             <RegularLink to="o-nama" variant='light' to="about" ref={(el) => (link3Ref = el)}>Ko smo mi</RegularLink>
-            <AnimatedLink to="kontakt" position='absolute' bottom={{ xxs: '-45px', lg: '-110px' }} className={isOnScreen && 'anim-start'} ref={(el) => (link4Ref = el)} variant='bold' to="contact">Kontakt</AnimatedLink>
+            <AnimatedLink to="kontakt" position='absolute' bottom={{ xxs: '-45px', lg: '-110px' }} className={isOnScreen && 'anim-start'} ref={(el) => (link4Ref = el)} variant='bold' to="kontakt">Kontakt</AnimatedLink>
         </Flex >
     );
 }

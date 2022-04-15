@@ -60,14 +60,9 @@ export const ProjectTitle = styled(H1)`
     ${respondTo.xxl`
         right: 270px;
         left: 270px;
-        // white-space: nowrap;
-        // font-size: 130px;
-        // line-height: 0.5;
     `}
 
     ${respondTo.ultraWide`
-        right: 270px;
-        left: 270px;
         white-space: nowrap;
         font-size: 130px;
         line-height: 0.5;

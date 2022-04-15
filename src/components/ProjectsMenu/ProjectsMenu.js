@@ -1,13 +1,12 @@
 import React, { useRef, useContext, useLayoutEffect } from 'react';
 
 import { isMobile } from 'react-device-detect';
-import { zoomOut, slideUp } from '../../utils/animation/animate';
+import { slideUp } from '../../utils/animation/animate';
 
 import { ProjectMenuWrapper, DarkForestLink, AshwoodLink, RuralLink, UrbanLink } from './style'
 import { Box, Flex } from '../../theme/base/layout';
 import { Burger, Bars } from '../Navbar/style';
 import { ProjectMenuContext } from '../Navbar/project-menu-context';
-import { useLocation } from 'react-router-dom';
 
 const ProjectsMenu = (toggleNav) => {
     let link1Ref = useRef(null)
@@ -16,14 +15,14 @@ const ProjectsMenu = (toggleNav) => {
     let link4Ref = useRef(null)
 
 
-    useLayoutEffect(() => {
-        if (!isMobile) {
-            slideUp(link1Ref);
-            slideUp(link2Ref, .5);
-            slideUp(link3Ref, .7);
-            slideUp(link4Ref, .7);
-        }
-    }, []);
+    // useLayoutEffect(() => {
+    //     if (!isMobile) {
+    //         slideUp(link1Ref);
+    //         slideUp(link2Ref, .5);
+    //         slideUp(link3Ref, .7);
+    //         slideUp(link4Ref, .7);
+    //     }
+    // }, []);
 
     const { isProjectsMenuOpen } = useContext(ProjectMenuContext);
 
