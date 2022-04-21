@@ -32,7 +32,6 @@ export const ProjectTitle = styled(H1)`
     max-width: 52%;
     text-transform: uppercase;
     font-size: 60px;
-    padding-left: 30px;
     padding-bottom: 32px;
 
     ${respondTo.xs`

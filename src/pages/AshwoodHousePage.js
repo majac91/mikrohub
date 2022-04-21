@@ -63,19 +63,19 @@ const AshwoodHousePage = () => {
         },
         {
             img: slide2,
-            text: DOMPurify.sanitize("Posebna pažnja posvećena je dizajnu enterijera i kobinovanju klasičnih i savremenih komada nameštaja u cilju postizanja eklektičnog stila. Tako je topla atmosfera dnevnog boravka nastala kombinovanjem klasičnog kožnog kauča, fotelje savremenog dizajna i rustičnih detalja, dok prozirne visilice predstavljaju osvežavajući kontrast. Takvim pristupom kreiran je harmoničan enterijer bogat detaljima.")
+            text: DOMPurify.sanitize("Topla atmosfera dnevnog boravka nastala je kombinovanjem klasičnog kožnog kauča, fotelje savremenog dizajna i rustičnih detalja, dok prozirne visilice predstavljaju osvežavajući kontrast. Takvim pristupom kreiran je harmoničan enterijer bogat detaljima.")
         },
         {
             img: slide3,
-            text: DOMPurify.sanitize("Posebna pažnja posvećena je dizajnu enterijera i kobinovanju klasičnih i savremenih komada nameštaja u cilju postizanja eklektičnog stila. Tako je topla atmosfera dnevnog boravka nastala kombinovanjem klasičnog kožnog kauča, fotelje savremenog dizajna i rustičnih detalja, dok prozirne visilice predstavljaju osvežavajući kontrast. Takvim pristupom kreiran je harmoničan enterijer bogat detaljima.")
+            text: DOMPurify.sanitize("Atmosferom i materijalizacijom, kuhinja i trpezarija se nadovezuju na prostor dnevnog boravka. Dizajn kuhinje objedinjuje rusične i savremene elemente kroz pažljivo povezivanje tople teksture drveta i pletenih površina ormana sa jednostavnom i čistom formom.")
         },
         {
             img: slide4,
-            text: DOMPurify.sanitize("Posebna pažnja posvećena je dizajnu enterijera i kobinovanju klasičnih i savremenih komada nameštaja u cilju postizanja eklektičnog stila. Tako je topla atmosfera dnevnog boravka nastala kombinovanjem klasičnog kožnog kauča, fotelje savremenog dizajna i rustičnih detalja, dok prozirne visilice predstavljaju osvežavajući kontrast. Takvim pristupom kreiran je harmoničan enterijer bogat detaljima.")
+            text: DOMPurify.sanitize("Funkcionalno i vizuelno, kuhinja je povezana i sa spoljašnjim prostorom za druženje i obedovanje, sa kojim se komunikacija može ostvariti otvaranjem prozora.")
         },
         {
             img: slide5,
-            text: DOMPurify.sanitize("Posebna pažnja posvećena je dizajnu enterijera i kobinovanju klasičnih i savremenih komada nameštaja u cilju postizanja eklektičnog stila. Tako je topla atmosfera dnevnog boravka nastala kombinovanjem klasičnog kožnog kauča, fotelje savremenog dizajna i rustičnih detalja, dok prozirne visilice predstavljaju osvežavajući kontrast. Takvim pristupom kreiran je harmoničan enterijer bogat detaljima.")
+            text: DOMPurify.sanitize("Galerijski prostor iznad dnevnog boravka namenjen je svaćoj i radnoj zoni, koju odlikuje izrazit minimalizam oblikovanja. Pažnja korisnika usmerena je na spoljašnje vizure neposrednog prirodnog okruženja i transformišućeg nebeskog pejzaža.")
         }
     ]
 
@@ -98,7 +98,7 @@ const AshwoodHousePage = () => {
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='light' to="/contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='light' to="/kontakt" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>

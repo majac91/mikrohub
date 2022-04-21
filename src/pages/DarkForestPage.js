@@ -62,19 +62,19 @@ const DarkForestPage = () => {
         },
         {
             img: slide2,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Kuhinja koja se nalazi ispod stepeništa sadrži uređaje standardnih dimenzija čime je stanarima pružen maksimalni komfor tokom korišćenja, a primenjeni materijali čine da kuhinja ne dominira nad spektakularnim pejzažom koji je okružuje.")
         },
         {
             img: slide3,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Imajući na umu hibridne modele rada, dizajnirana je posebna prostorija namenjena radu u kojoj nesmetano mogu da rade dve osobe. Portal na sredini radnog stola uokvirava prirodan pejzaž čim priroda postaje fokalna tačka ovog prostora.")
         },
         {
             img: slide4,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Minimalistički dizajnirano kupatilo stilski se nadovezuje na ostatak enterijera. Pročišćeno od suvišnih detalja glavni motiv predstavljaju svetle pločice grube obrade, koje kombinovane sa crnim detaljima daju savremeni kontrast.")
         },
         {
             img: slide5,
-            text: DOMPurify.sanitize("Na portalu Gradnja članak o projektu Darkforest je jedan od <a href=''>pet najčitanijih članaka</a> tokom 2021. godine iz kategorije lokalne arhitekture ali i najčitaniji iz kategorije konkursa <a href=''>Mini home</a> sa preko 18850 pregleda.")
+            text: DOMPurify.sanitize("Kako bi se u potpunosti iskoristile prednosti boravka u prirodi, velika pažnja je posvećena dizajnu prostora za spavanje i odmor, u kojem se frontalnim, bočnim i krovnim otvorima stvaraju vizualni prodori ka prirodi i prijatan osećaj povezanosti sa okruženjem.")
         }
     ]
 
@@ -98,7 +98,7 @@ const DarkForestPage = () => {
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/contact" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/kontakt" fontSize={{ lg: '180px' }}>Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>

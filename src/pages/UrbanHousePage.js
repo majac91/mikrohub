@@ -121,7 +121,7 @@ const RuralHousePage = () => {
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/contact">Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/kontakt">Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>

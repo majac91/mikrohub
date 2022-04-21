@@ -62,11 +62,11 @@ const RuralHousePage = () => {
         },
         {
             img: slide2,
-            text: DOMPurify.sanitize("Ruralna kuća je dizajnirana tako da korisnicima pruži osećaj topline doma i povezanosti sa prirodnim okruženjem. Velike zastakljene površine pružaju široke vizure i prodor prirodnog svetla, dok se u vreme nekorišćenja mogu zatvoriti zaštitnim panelima.")
+            text: DOMPurify.sanitize("Kako bi se korisnicima pružila maksimalna udobnost u ograničenom prostoru, dizajnirana je udobna ugaona klupa, koja daje mogućnost individualne relaksacije uz veliki prozor sa vizurom ili okupljanje više osoba.")
         },
         {
             img: slide3,
-            text: DOMPurify.sanitize("Ruralna kuća je dizajnirana tako da korisnicima pruži osećaj topline doma i povezanosti sa prirodnim okruženjem. Velike zastakljene površine pružaju široke vizure i prodor prirodnog svetla, dok se u vreme nekorišćenja mogu zatvoriti zaštitnim panelima.")
+            text: DOMPurify.sanitize("Izazov stvaranja funkionalne kuhinje i trpezarije u malom prostoru rešen je osmisljavanjem sklopivog stola koji po potrebi može služiti obedovanju ili kao dodatna radna površina.")
         }
     ]
 
@@ -89,7 +89,7 @@ const RuralHousePage = () => {
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
-                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/contact">Kontakt</AnimatedLink>
+                    <AnimatedLink className={isOnScreen && 'anim-start'} ref={contactRef} variant='bold' to="/kontakt">Kontakt</AnimatedLink>
                 </LinkWrapper>
             </Box>
         </>
