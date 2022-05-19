@@ -30,6 +30,7 @@ const Navbar = ({ isProjectsMenuOpen, setIsProjectsMenuOpen, toggleProjectsMenu 
 
     const toggleNav = () => setIsOpen(prev => !prev);
 
+
     // const toggleProjectsMenu = () => {
     //     setIsProjectsMenuOpen(prev => !prev);
     // };
@@ -52,7 +53,7 @@ const Navbar = ({ isProjectsMenuOpen, setIsProjectsMenuOpen, toggleProjectsMenu 
                     <NavMenu ref={navMenuRef} $mode={isOpen ? 'open' : 'closed'}>
                         <NavItem onClick={toggleProjectsMenu}>
                             <NavLink to='#' disabled={true} >Projekti</NavLink>
-                            {isProjectsMenuOpen && <ProjectsMenu onClick={toggleNav} />}
+                            {isProjectsMenuOpen && <ProjectsMenu toggleNav={toggleNav} />}
                         </NavItem>
                         <NavItem onClick={toggleNav}>
                             <NavLink to="proces">Proces</NavLink>

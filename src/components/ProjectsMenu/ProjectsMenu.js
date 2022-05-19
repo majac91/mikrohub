@@ -8,7 +8,7 @@ import { Box, Flex } from '../../theme/base/layout';
 import { Burger, Bars } from '../Navbar/style';
 import { ProjectMenuContext } from '../Navbar/project-menu-context';
 
-const ProjectsMenu = (toggleNav) => {
+const ProjectsMenu = ({ toggleNav }) => {
     let link1Ref = useRef(null)
     let link2Ref = useRef(null)
     let link3Ref = useRef(null)
