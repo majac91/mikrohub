@@ -43,7 +43,7 @@ const Navbar = ({ isProjectsMenuOpen, setIsProjectsMenuOpen, toggleProjectsMenu 
                         <Link to="/">
                             <span>m</span>
                             <span ref={mikroRef}>ikro</span>
-                            <span>.h</span>
+                            <span>.hh</span>
                             <span ref={hubRef}>ub</span>
                         </Link>
                     </Logo>

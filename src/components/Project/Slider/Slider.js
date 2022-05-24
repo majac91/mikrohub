@@ -28,10 +28,10 @@ const Slider = ({ slides, aspect }) => {
                     onSwiper={setControlledSwiper}
                     autoHeight='true'
                     noSwiping='true'
-                    noSwipingClass='imgSlider'
                     breakpoints={{
                         768: {
                             slidesPerView: 1,
+                            noSwipingClass: 'imgSlider'
                         },
                         0: {
                             slidesPerView: 1.3,
