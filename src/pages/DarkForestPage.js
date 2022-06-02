@@ -20,6 +20,7 @@ import coverImg from '../img/dark-forest/cover.jpeg'
 import img1 from '../img/dark-forest/osnova1.jpeg';
 import img2 from '../img/dark-forest/osnova2.jpeg';
 import imgSection1 from '../img/dark-forest/dark-forest-section1.jpeg';
+import imgSection2 from '../img/dark-forest/dark-forest-section2.jpg';
 
 import slide1 from '../img/dark-forest/df-slider-1.jpeg';
 import slide2 from '../img/dark-forest/df-slider-2.jpeg';
@@ -94,7 +95,7 @@ const DarkForestPage = () => {
             </Box>
             <Slider slides={slides} aspect='100%' />
             <ImgWrapper scale='1.05' ref={(el) => (imgSection2Ref = el)} aspect='50%'>
-                <img src={imgSection1} />
+                <img src={imgSection2} />
             </ImgWrapper>
             <Box pt={{ xs: '110px', lg: '392px' }} pb={{ xs: '79px', lg: '305px' }} textAlign='center' position='relative'>
                 <LinkWrapper>
